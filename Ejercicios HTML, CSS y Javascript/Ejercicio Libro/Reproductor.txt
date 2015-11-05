@@ -1,0 +1,54 @@
+﻿<<!-CÓDIGO HTML PARA EL REPRODUCTOR--->
+          <section class="repro">
+            <video id="video1" width="640" height="360">
+              <source src="vídeos/musicos_calle.ogv">
+            </video>
+            <nav>
+              <input type="button" id="Reproducir" value="Reproducir">
+                <div id="barraprog">
+                  <div id="progreso"></div>
+                </div>
+              <div id="volumen">
+                <input type="range" id="volume" min="0" max="1" step="0.1" 	value="0.6">
+              </div>
+              <input type="button" id="Silencio" value="Silenciar">
+            </nav>
+          </section>
+
+/*CÓDIGO CSS PARA SUS ESTILOS*/
+.repro{
+  width: 640px;
+  height:420px;
+  margin:auto;
+  padding: 10px 5px 5px 5px;
+  background: #999966;
+  border: 2px solid olive;
+  box-shadow:0 0 10px #360;
+  }
+
+#Reproducir, #Silencio, #barraprog, #volumen{
+  float: left;
+  display:inline;
+  height: 20px;
+  padding: 1px 5px;
+  margin: 10px 10px;
+  border: 2px solid olive;
+  box-shadow:0 0 10px #360;
+  background: #EEEEEE;
+
+  }
+	
+#Reproducir, #Silencio{
+  width: 80px;
+  }
+  
+#barraprog{
+  width: 230px;
+  }
+  
+#progreso{
+ width:0px;
+  height: 20px;
+  background-color:#33FF33;
+  box-shadow:0 0 10px #360;
+  }

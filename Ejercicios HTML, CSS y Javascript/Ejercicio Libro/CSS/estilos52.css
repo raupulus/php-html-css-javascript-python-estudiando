@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+/*Fuentes*/
+@font-face{
+ font-family:'Pfennig';
+ src:url(../Fuentes/Pfennig.eot);
+ src:url(../Fuentes/Pfennig.svg);
+ src:url(../Fuentes/Pfennig.ttf);
+}
+@font-face{
+ font-family:'PfennigBold';
+ src:url(../Fuentes/PfennigBold.eot);
+ src:url(../Fuentes/PfennigBold.svg);
+ src:url(../Fuentes/PfennigBold.ttf);
+ }
+@font-face{
+ font-family:'PfennigItalic';
+ src:url(../Fuentes/PfennigBoldItalic.eot);
+ src:url(../Fuentes/PfennigBoldItalic.svg);
+ src:url(../Fuentes/PfennigBoldItalic.ttf);
+ } 
+ 
+body{
+  font-family:'Pfennig';
+  }
+
+h1, h2, h3, strong, b{
+  font-family:'PfennigBold';
+  }
+  
+dfn, blockquote{
+  font-family:'PfennigItalic';
+  }
+  
+#barra a{
+  font-family:'PfennigBold';
+  text-decoration:none;
+}
+
+/*Tamaño de la fuente, alineación, interlineado*/
+#principal{
+ font-size:1em;
+ text-align:justify
+ }
+
+#CabeceraPágina h1{
+  font-size:350%;
+  text-align:center;
+  line-height:0%;
+  font-variant:small-caps;
+  }
+
+#CabeceraPágina h2{
+  font-size:250%;
+  text-align:center;
+  line-height:0%;
+  }
+
+#blog h2{ 
+ font-size:250%;
+ text-align:center;
+ line-height:10%;
+ }
+
+h3{ 
+ font-size:180%;
+ text-align:center;
+ line-height:0%;
+}
+
+/*Sombras*/
+.sombra{
+ text-shadow:4px 4px 4px #333;
+ -webkit-text-stroke:2px #063;
+ -webkit-text-fill-color:#99CC00;
+ }
+
+/*Fondos principales*/
+#principal{
+	background-color:rgb(153,204,153);
+	width:1000px; 
+	margin:auto;
+	overflow:hidden;
+	}
+
+#CabeceraPágina{
+   overflow:hidden; 
+   background:-webkit-linear-gradient(top, #99CC00, #99CC99 30%);
+   }
+
+header:not(#CabeceraPágina){
+   background-color:rgba(255,255,255,0.8 );
+   }
+
+/*Barra de navegación cabecera*/ 
+#barra{
+   background-color:#FF6600;
+   height:50px;
+   padding:5px;
+   }
+
+#barra ul li:nth-child(1){
+  background:#FFFFFF;
+  }
+#barra ul li:nth-child(2){
+  background: #CCCCCC;
+  }
+#barra ul li:nth-child(3){
+  background: #999999;
+  }
+  
+#barra ul li {
+  display:inline;
+  margin:10px;
+  background-color:#E4E4E4;
+  padding:5px 10px 5px 10px;
+  box-shadow:0 0 10px #360;
+  border-radius:1em;
+ 
+  }
+
+/*Sobre Contxita - Home*/
+#sobreContxita img{
+ margin:10px;
+ float:left;
+ box-shadow:0 0 10px #360;
+ border-radius:.5em;
+ -webkit-box-reflect:right 10px -webkit-gradient(linear, right center, left center, from(white), to(transparent),color-stop(75%, transparent)); 
+ }
+ 
+#sobreContxita aside{
+ width:770px;
+ height:226px;
+ margin:10px 10px 10px 0px;
+ float:left;
+ box-shadow:0 0 10px #360;
+ border-radius:.5em;
+ background:-webkit-radial-gradient(50% 50%, 800px 180px, #99CC99, #99CC00);
+ }
+
+#sobreContxita blockquote{
+	margin-top:3em;
+	margin-left:10em;
+	margin-right:3em;
+	line-height:1.5em;
+ }
+ 
+  
+  /*Vínculos*/7
+a:link {
+ color:green;
+  }
+a:visited {
+ color:blue;
+  }
+a:hover {
+ color:red;
+}
+a:active:visited {
+ color: yellow;
+}
+
+/*Artículos*/
+#blog{
+ margin:0px 5px 5px 10px;
+ width:760px;
+ background-color:rgba(250, 250, 250, .7);
+ float:left;
+ box-shadow:0 0 10px #360;
+ border-radius:.5em;
+}
+
+#posts{
+ margin:0px 10px 5px 5px;
+ width:210px;
+ height:500px;
+ background-color:rgba(250, 250, 250, .7);
+ float:left;
+ box-shadow:0 0 10px #360;
+ border-radius:.5em;
+}  
+
+#posts h2{
+	text-align:center
+	}
+ 
+p, h1, h2, h3{padding:10px}
+
+/*Galería Home*/
+.galeria{
+margin: 0px 30px 0px 30px;
+background: #D8EEFE;
+padding: 10px;
+}
+
+.galeria img {
+margin: 10px;
+padding: 5px;
+width: 130px;
+background: #CCC;
+border: solid 1.5px #666;
+}
+ 
+/*Formulario*/
+#formulario{
+   background-image:url("../Imágenes/teclas.jpg");
+   background-repeat:no-repeat;
+   background-position:left center;
+   }
+#formulario p, fieldset{
+  background-color:rgba(250,250,250,.5)
+  }
+  
+/*Biografía*/
+
+#enPiano{
+	float:left;
+	margin:20px;
+	box-shadow:0 0 10px #360;
+	border-radius:.5em;
+	}
+
+#bio{
+	float:right;
+	margin-right:20px;
+	margin-top:20px;
+	margin-bottom:20px;
+  	width:656px;
+	height:180px;
+    box-shadow:0 0 10px #360;
+	border-radius:.5em;
+	background:-webkit-radial-gradient(50% 50%, 800px 180px, #99CC99, #99CC00);
+	}
+
+  
+footer{
+   background-color:rgba(0, 80, 250, .7);
+   margin-top:5px;
+   width:1000px;
+   height:80px;
+   float:left 
+  }
+  
+ 

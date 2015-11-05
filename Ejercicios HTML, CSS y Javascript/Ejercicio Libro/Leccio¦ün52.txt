@@ -1,0 +1,33 @@
+<!--Código para insertar las imágenes en el documento HTML:-->
+        <article>  
+          <header>
+            <hgroup>
+              <h2> Galería</h2>
+              <h3> Contxita</h3>
+            </hgroup>
+          </header>
+ 	<div class="galeria">
+             <img src="Imágenes/logo.jpg" alt="Firma de Contxita Bentz con teclado de fondo">
+             <img src="Imágenes/ContxitaBentz02.jpg" alt="Foto de Contxita Bentz">
+            <img src="Imágenes/Teclas.jpg" alt="teclas del piano">
+            <img src="Imágenes/discografia_alba.jpg" alt="portada de disco">
+          </div>          
+        </article>
+
+/*Estilos para el elemento div*/
+/*Galería Home*/
+.galeria{
+	margin: 0px 30px 0px 30px;
+	background: #D8EEFE;
+	padding: 10px;
+	}
+
+
+/*Estilos para las imágenes*/
+.galeria img {
+	margin: 10px;
+	padding: 5px;
+	width: 130px;
+	background: #CCC;
+	border: solid 1.5px #666;
+	}
