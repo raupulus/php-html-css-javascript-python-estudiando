@@ -1,0 +1,128 @@
+<HTML>
+<HEAD>
+<STYLE>
+	IMG {
+		vertical-align: middle;
+	}
+</STYLE>
+<SCRIPT TYPE="text/javascript">
+	// Función que muestra la imagen original
+	function mostrarOriginal() {
+		this.src = "derecha.gif";
+	}
+	// Función que cambia la imagen original
+	function cambiarOriginal() {
+		this.src = "izquierda.gif";
+	}
+	
+	// Función que valida el formulario
+	function validarFormulario() {
+		// Operaciones de validación
+		with(document.formLogin) {
+			if (usuario.value == "") {
+				alert("El usuario no es válido");
+				usuario.focus();
+			} else if (clave.value == "") {
+				alert("La contraseña no es válida");
+				clave.focus();
+			} else {
+				alert("¡Todo correcto! Puedes enviar el formulario.");
+			}
+		}
+	}
+	
+	// Función que comprueba la opción seleccionada
+	function comprobarMezcla() {
+		// Obtenemos la opción seleccionada
+		var opcionSeleccionada = this.options[this.selectedIndex];
+		if (opcionSeleccionada.index == 2) {
+			alert("¡Muy bien!");
+		} else {
+			alert("Lo siento, no es " + opcionSeleccionada.value + "… Inténtalo de nuevo.");
+		}
+	}
+	
+	// Función que añade un evento en el textarea
+	function pintarEvento(evento) {
+		document.formEventos.eventos.value += evento.type + "\n";
+	}
+</SCRIPT>
+</HEAD>
+<BODY>
+<H3>Ejemplos con eventos</H3>
+<UL>
+	<LI>
+		<B>Rollover</B><BR />
+		Mueve el puntero sobre la imagen
+		<IMG ID="imagen1" NAME="flecha" SRC="derecha.gif" />
+	</LI>
+</UL>
+<SCRIPT TYPE="text/javascript">
+	// Asignamos los manejadores
+	document.flecha.onmouseover = cambiarOriginal;
+	document.flecha.onmouseout = mostrarOriginal;
+</SCRIPT>
+
+<UL>
+	<LI>
+		<B>Formulario de acceso</B>
+		<FORM ID="formulario1" NAME="formLogin" ACTION="login.php" METHOD="post">
+			<TABLE>
+			<TR>
+				<TD STYLE="text-align: right;">Usuario</TD>
+				<TD><INPUT TYPE="text" ID="entrada1" NAME="usuario" MAXLENGTH="8" /></TD>
+			</TR>
+			<TR>
+				<TD STYLE="text-align: right;">Contraseña</TD>
+				<TD><INPUT TYPE="password" ID="entrada2" NAME="clave" /></TD>
+			</TR>
+			<TR>
+				<TD COLSPAN="2" STYLE="text-align: right;"><INPUT TYPE="button" ID="boton1" NAME="botonValidar" VALUE="Validar" /></TD>
+			</TR>
+			</TABLE>
+		</FORM>
+	</LI>
+</UL>
+<SCRIPT TYPE="text/javascript">
+	// Asignamos el manejador
+	document.formLogin.botonValidar.onclick = validarFormulario;
+</SCRIPT>
+
+<UL>
+	<LI>
+		<B>Adivina la mezcla de colores</B>
+		<FORM ID="formulario1" NAME="formColores">
+			Rojo + 
+			<SELECT ID="seleccion1" NAME="color">
+				<OPTION VALUE="Verde">Verde</OPTION>
+				<OPTION VALUE="Azul">Azul</OPTION>
+				<OPTION VALUE="Amarillo">Amarillo</OPTION>
+			</SELECT>
+			= Naranja
+		</FORM>
+	</LI>
+</UL>
+<SCRIPT TYPE="text/javascript">
+	// Inicializamos selección
+	document.formColores.color.selectedIndex = -1;
+	// Asignamos el manejador
+	document.formColores.color.onchange = comprobarMezcla;
+</SCRIPT>
+
+<UL>
+	<LI>
+		<B>Haz clic sobre el botón para ver los eventos que se lanzan</B>
+		<FORM NAME="formEventos">
+			<TEXTAREA NAME="eventos" ROWS="9"></TEXTAREA>
+			<INPUT TYPE="button" NAME="btnEvento" VALUE="Ver eventos">
+		</FORM>
+	</LI>
+</UL>
+<SCRIPT TYPE="text/javascript">
+	// Asignamos los manejadores (no importa el orden)
+	document.formEventos.btnEvento.onclick = pintarEvento;
+	document.formEventos.btnEvento.onmousedown = pintarEvento;
+	document.formEventos.btnEvento.onmouseup = pintarEvento;
+</SCRIPT>
+</BODY>
+</HTML>

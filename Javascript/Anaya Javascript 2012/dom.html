@@ -1,0 +1,144 @@
+<HTML>
+<HEAD>
+<STYLE>
+	INPUT {
+		width: 150px;
+		margin-left: 15px;
+	}
+	LI {
+		padding-bottom: 10px;
+	}
+	IMG {
+		vertical-align: middle;
+	}
+</STYLE>
+<SCRIPT TYPE="text/javascript">
+	function lanzarConfirm() {
+		// Capturamos el botón
+	   var boton = confirm("¿Quieres continuar?");
+	   if (boton) {
+		  alert("¡Adelante!");
+	   } else {
+		  alert("Hasta pronto");
+	   }
+	}
+
+	function lanzarPrompt() {
+	   // Capturamos el texto
+	   var texto = prompt("¿Qué navegador utilizas?");
+	   if (texto == null) {
+		  alert("Vale, sólo era una pregunta…");
+	   } else {
+		  alert("Utilizas: " + texto);
+	   }
+	}
+	
+	function lanzarNavigator() {
+		// Mostramos las propiedades
+		alert("appCodeName: " + navigator.appCodeName + "\n" + 
+			"appName: " + navigator.appName  + "\n" +
+			"appMinorVersion: " + navigator.appMinorVersion + "\n" +
+			"appVersion: " + navigator.appVersion  + "\n" +
+			"userAgent: " + navigator.userAgent  + "\n" +
+			"browserLanguage: " + navigator.browserLanguage  + "\n" +
+			"systemLanguage: " + navigator.systemLanguage  + "\n" +
+			"userLanguage: " + navigator.userLanguage + "\n" +
+			"language: " + navigator.language  + "\n" +
+			"cpuClass: " + navigator.cpuClass  + "\n" +
+			"platform: " + navigator.platform  + "\n" +
+			"cookieEnabled: " + navigator.cookieEnabled);
+	}
+	
+	function lanzarScreen() {
+		// Mostramos las propiedades
+		alert("width: " + screen.width + "\n" + 
+			"height: " + screen.height  + "\n" +
+			"availWidth: " + screen.availWidth + "\n" +
+			"availHeight: " + screen.availHeight  + "\n" +
+			"colorDepth: " + screen.colorDepth);
+	}
+	
+	function lanzarLocation() {
+		with(location) {
+			alert("href: " + href + "\n" +
+				"hostname: " + hostname + "\n" +
+				"pathname: " + pathname + "\n" +
+				"hash: " + hash + "\n" +
+				"search: " + search + "\n" +
+				"port: " + port + "\n" +
+				"host: " + host + "\n" +
+				"protocol: " + protocol);
+		}
+	}
+	
+	function lanzarDocument() {
+		with(document) {
+		alert("cookie: " + cookie + "\n" +
+			"domain: " + domain + "\n" +
+			"lastModified: " + lastModified + "\n" +
+			"referrer: " + referrer + "\n" +
+			"title: " + title + "\n" +
+			"URL: " + URL);
+		}
+	}
+	
+	function lanzarAnchor() {
+		with(document.anchors["listado"]) {
+			alert("id: " + id + "\n" +
+				"nombre: " + name + "\n" +
+				"destino: " + target + "\n" +
+				"texto (text): " + text + "\n" +
+				"texto (innerHTML): " + innerHTML);
+		}
+	}
+	
+	function lanzarLink() {
+		with(document.links[0]) {
+			alert("id: " + id + "\n" +
+				"URL: " + href  + "\n" +
+				"destino: " + target + "\n" +
+				"servidor: " + hostname + "\n" +
+				"ruta: " + pathname + "\n" +
+				"hash: " + hash + "\n" +
+				"consulta: " + search + "\n" +
+				"puerto: " + port + "\n" +
+				"servidor y puerto: " + host + "\n" +
+				"protocolo: " + protocol + "\n" +
+				"texto (text): " + text + "\n" +
+				"texto (innerHTML): " + innerHTML);
+		}
+	}
+	
+	function lanzarImage() {
+		with(document.images[0]) {
+				alert("id: " + id + "\n" +
+				"nombre: " + name+ "\n" +
+				"URL: " + src+ "\n" +
+				"ancho: " + width+ "\n" +
+				"alto: " + height + "\n" +
+				"texto alternativo: " + alt + "\n" +
+				"texto sobre imagen: " + title);
+		}
+	}
+</SCRIPT>
+</HEAD>
+<BODY>
+<H3>Algunos objetos del DOM</H3>
+<INPUT TYPE="button" VALUE="Método confirm" ONCLICK="lanzarConfirm()">
+<INPUT TYPE="button" VALUE="Método prompt" ONCLICK="lanzarPrompt()"><BR /><BR />
+<INPUT TYPE="button" VALUE="Objeto navigator" ONCLICK="lanzarNavigator()">
+<INPUT TYPE="button" VALUE="Objeto screen" ONCLICK="lanzarScreen()">
+<INPUT TYPE="button" VALUE="Objeto location" ONCLICK="lanzarLocation()">
+<INPUT TYPE="button" VALUE="Objeto document" ONCLICK="lanzarDocument()"><BR /><BR />
+<INPUT TYPE="button" VALUE="Objeto anchor" ONCLICK="lanzarAnchor()">
+<INPUT TYPE="button" VALUE="Objeto link" ONCLICK="lanzarLink()">
+<INPUT TYPE="button" VALUE="Objeto image" ONCLICK="lanzarImage()">
+<HR>
+<H4>Elementos de prueba</H4>
+<UL>
+	<LI><A ID="anchor1" NAME="listado" TARGET="_self">Anchor o ancla</A></LI>
+	<LI><A ID="link1" HREF="inicio.html">Link o enlace</A></LI>
+	<LI><IMG ID="imgLogo" NAME="logo" SRC="logo.gif" WIDTH="97" HEIGHT="68" ALT="Logo de la empresa" TITLE="Este es nuestro logo"></IMG></LI>
+</UL>
+</BODY>
+</HTML>

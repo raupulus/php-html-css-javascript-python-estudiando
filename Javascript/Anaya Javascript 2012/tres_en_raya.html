@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<STYLE>
+	TD {
+		text-align: center;
+	}
+</STYLE>
+<SCRIPT TYPE="text/javascript" SRC="objeto_tablero.js"></SCRIPT>
+<SCRIPT TYPE="text/javascript">
+// Declaramos una variable global
+var tresEnRaya;
+function crearTablero() {
+	// Creamos una instancia del tablero
+	tresEnRaya = new Tablero();
+	// Inicializamos el tablero
+	tresEnRaya.inicializarTablero();
+}
+</SCRIPT>
+</HEAD>
+<BODY ONLOAD="crearTablero()">
+<H3>Juego de las 3 en raya</H3>
+ <TABLE BORDER="1">
+ <TR>
+	<TD ID="casilla00" STYLE="width: 50px; height: 50px"></TD>
+	<TD ID="casilla01" STYLE="width: 50px; height: 50px"></TD>
+	<TD ID="casilla02" STYLE="width: 50px; height: 50px"></TD>
+ </TR>
+ <TR>
+	<TD ID="casilla10" STYLE="width: 50px; height: 50px"></TD>
+	<TD ID="casilla11" STYLE="width: 50px; height: 50px"></TD>
+	<TD ID="casilla12" STYLE="width: 50px; height: 50px"></TD>
+ </TR>
+ <TR>
+	<TD ID="casilla20" STYLE="width: 50px; height: 50px"></TD>
+	<TD ID="casilla21" STYLE="width: 50px; height: 50px"></TD>
+	<TD ID="casilla22" STYLE="width: 50px; height: 50px"></TD>
+ </TR>
+ </TABLE>
+
+<SCRIPT TYPE="text/javascript">
+// Obtenemos todas las celdas de la tabla
+var celdas = document.getElementsByTagName("TD");
+// Asignamos el manejador a todas las celdas
+for(var i=0; i<celdas.length; i++) {
+	// Asignamos el manejador
+	celdas[i].onclick = function (){
+		// Obtenemos la fila (penúltimo carácter)
+		var fila = this.id.substr(-2, 1);
+		// Obtenemos la columna (último carácter)
+		var columna = this.id.substr(-1);
+		// Registramos la jugada en el tablero
+		tresEnRaya.marcarMovimiento(fila, columna);
+	}
+}
+</SCRIPT>
+</BODY>
+</HTML>

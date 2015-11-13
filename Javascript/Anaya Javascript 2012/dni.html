@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<SCRIPT TYPE="text/javascript">
+	function calcularLetra(numeroDNI) {
+		// Declaración de variables
+		var posicion, letra;
+		var letrasDNI = "TRWAGMYFPDXBNJZSQVHLCKET";
+		// Calculamos la posición
+		posicion = numeroDNI % 23;
+		// Extraemos la letra calculada
+		letra = letrasDNI.substr(posicion, 1);
+		// Devolvemos la letra
+		return letra;
+	}
+
+	function comprobarFormato(numeroDNI) {
+		// Declaración de variables
+		var patronDNI = new RegExp("\\d{8}[a-zA-Z]");
+		// Comprobamos el formato
+		if (patronDNI.test(numeroDNI)) {
+			// Devolvemos los 8 números del DNI
+			return numeroDNI.substr(0, 8);
+		} else {
+			// Mostramos un mensaje al usuario
+			alert("El DNI " + numeroDNI + " no tiene un formato válido");
+			return "";
+		}
+	}
+
+	function validarDNI() {
+		// Declaración de variables
+		var DNIUsuario, numeroDNI, letraUsuario, letraCalculada;
+		// Recogemos el valor del formulario
+		DNIUsuario = document.formDNI.dni.value;
+		// Comprobamos el formato y guardamos el número sin la letra
+		numeroDNI = comprobarFormato(DNIUsuario);
+		// Si el formato es correcto
+		if (numeroDNI != "") {
+			// Guardamos la letra introducida por el usuario
+			letraUsuario = DNIUsuario.substr(-1);
+			// Calculamos la letra por nuestra cuenta
+			letraCalculada = calcularLetra(numeroDNI);
+			// Comparamos ambas letras mostrando un mensaje
+			if (letraUsuario.toUpperCase() == letraCalculada) {
+				alert("El DNI " + DNIUsuario + " es correcto");
+			} else {
+				alert("La letra del DNI " + DNIUsuario + " no es correcta");
+			}
+		}
+	}
+</SCRIPT>
+</HEAD>
+<BODY>
+<H3>Formulario para validar un DNI</H3>
+<FORM ID="formulario1" NAME="formDNI">
+	DNI: <INPUT TYPE="text" ID="entrada1" NAME="dni" MAXLENGTH="9" />
+	<INPUT TYPE="button" ID="boton1" NAME="botonValidar" VALUE="Validar" ONCLICK="validarDNI()"/>
+</FORM>
+
+</BODY>
+</HTML>

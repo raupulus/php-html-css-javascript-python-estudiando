@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<STYLE>
+	INPUT[TYPE=button] {
+		width: 100px;
+	}
+</STYLE>
+<SCRIPT TYPE="text/javascript" SRC="funciones_cookie.js"></SCRIPT>
+<SCRIPT TYPE="text/javascript">
+	function leerCookie() {
+		var nombreCookie;
+		var valorCookie = "";
+		// Obtenemos el nombre
+		with (document.formCookie) {
+			// Comprobamos si hemos indicado el nombre
+			if (nombre.value == "") {
+				alert("Debe escribir el nombre de la cookie.");
+				nombre.focus();
+				return;
+			} else {
+				// Guardamos el nombre de la cookie
+				nombreCookie = nombre.value;
+			}
+			// Llamamos a la función que recupera la cookie
+			valorCookie = recuperarCookie(nombreCookie);
+		}
+		// Mostramos el valor de la cookie
+		if (valorCookie != "") {
+			alert("El valor de la cookie " + nombreCookie + " es:\n" + valorCookie);
+		} else {
+			alert("No se ha encontrado la cookie " + nombreCookie);
+		}
+	}
+
+	function agregarCookie() {
+		var expiracion;
+		var hoy = new Date();
+		// Obtenemos los campos
+		with (document.formCookie) {
+			// Comprobamos si hemos indicado el nombre y valor
+			if (nombre.value == "" || valor.value == "") {
+				alert("Debe escribir el nombre y valor de la cookie.");
+				nombre.focus();
+				return;
+			}
+			// Comprobamos si hemos indicado caducidad
+			if (caducidad.value != "") {
+				expiracion = new Date();
+				expiracion.setTime(hoy.getTime() + (caducidad.value * 1000));
+			}
+			// Llamamos a la función que crea la cookie
+			almacenarCookie(nombre.value, valor.value, expiracion);
+			if (caducidad.value != "" && caducidad.value <= 0) {
+				alert("Cookie " + nombre.value + " borrada.");
+			} else {	
+				alert("Cookie " + nombre.value + " almacenada.");
+			}
+
+		}
+	}
+</SCRIPT>
+</HEAD>
+<BODY>
+<H3>Formulario para expiración de cookies</H3>
+<FORM ID="formulario1" NAME="formCookie">
+	<TABLE>
+	<TR>
+		<TD STYLE="text-align: right;">Nombre de la cookie:</TD>
+		<TD><INPUT TYPE="text" ID="entrada1" NAME="nombre" /> <B>(obligatorio)</B></TD>
+	</TR>
+	<TR>
+		<TD STYLE="text-align: right;">Valor:</TD>
+		<TD><INPUT TYPE="text" ID="entrada2" NAME="valor" /> <B>(obligatorio)</B></TD>
+	</TR>
+	<TR>
+		<TD STYLE="text-align: right;">Caducidad:</TD>
+		<TD><INPUT TYPE="text" ID="entrada3" NAME="caducidad" /> (segundos)</TD>
+	</TR>
+	<TR>
+		<TD STYLE="text-align: center;"><INPUT TYPE="button" ID="boton1" NAME="botonAgregar" VALUE="Agregar" ONCLICK="agregarCookie()" /></TD>
+		<TD STYLE="text-align: center;"><INPUT TYPE="button" ID="boton2" NAME="botonLeer" VALUE="Leer" ONCLICK="leerCookie()" /></TD>
+	</TR>
+	</TABLE>
+</FORM>
+<HR>
+<B>NOTAS</B>
+<UL>
+	<LI>Para modificar una cookie, almac&eacute;nela con el nuevo valor.</LI>
+	<LI>Para borrar una cookie, ponga una cantidad negativa como caducidad (fecha pasada).</LI>
+</UL>
+</BODY>
+</HTML>

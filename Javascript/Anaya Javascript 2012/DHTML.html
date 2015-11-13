@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<STYLE>
+	.visible {
+		display: block;
+	}
+	.oculto {
+		display: none;
+	}
+	.caja {
+		border: 1px solid red;
+		width: 150px;
+		height: 45px;
+		cursor: pointer;
+	}
+	.traduccion {
+		position: absolute;
+		border: 2px solid green;
+		background-color: #F0F0F0;
+		width: 150px;
+		height: 45px;
+	}
+	DIV {
+		text-align: center;
+		padding-top: 15px;
+	}
+</STYLE>
+<SCRIPT TYPE="text/javascript">
+	function mostrarTraduccion(evento, idCapa) {
+		// Obtenemos la posición del cursor
+		var topCapa = evento.clientY;
+		var leftCapa = evento.clientX + 20;
+		// Hacemos visible la capa
+		document.getElementById(idCapa).className = "traduccion visible";
+		// Colocamos la capa
+		document.getElementById(idCapa).style.top = topCapa;
+		document.getElementById(idCapa).style.left = leftCapa;
+	}
+	function ocultarTraduccion(idCapa) {
+		// Ocultamos la capa
+		document.getElementById(idCapa).className = "traduccion oculto";
+	}
+</SCRIPT>
+</HEAD>
+<BODY>
+<DIV ID="traduccion1" CLASS="traduccion oculto">Perro</DIV>
+<DIV ID="traduccion2" CLASS="traduccion oculto">Casa</DIV>
+<DIV ID="traduccion3" CLASS="traduccion oculto">Silla</DIV>
+<DIV CLASS="caja" ONMOUSEDOWN="mostrarTraduccion(event, 'traduccion1')" ONMOUSEOUT="ocultarTraduccion('traduccion1')">Dog</DIV><br>
+<DIV CLASS="caja" ONMOUSEDOWN="mostrarTraduccion(event, 'traduccion2')" ONMOUSEOUT="ocultarTraduccion('traduccion2')">House</DIV><br>
+<DIV CLASS="caja" ONMOUSEDOWN="mostrarTraduccion(event, 'traduccion3')" ONMOUSEOUT="ocultarTraduccion('traduccion3')">Chair</DIV>
+</BODY>
+</HTML>

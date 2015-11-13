@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+	var idComprobarAlarma;
+	var alarma;
+	function mostrarHora()
+	{
+		// Obtenemos la fecha y hora actuales
+		var ahora = new Date();
+		// Colocamos los valores necesarios en el formulario
+		with(document.formHora){
+			horaActual.value = ahora.getHours();
+			minActual.value = ahora.getMinutes();
+			segActual.value = ahora.getSeconds();
+		}
+	}
+
+	function fijarAlarma(hora, minutos) {
+		// Declaración de variables
+		var ahora, primeraComprobacion;	
+		// Fijamos la alarma
+		alarma = new Date();
+		alarma.setHours(hora, minutos);
+		// Preparamos la primera comprobación de alarma
+		ahora = new Date();
+		primeraComprobacion = (60 - ahora.getSeconds()) * 1000;
+		idComprobarAlarma = setTimeout("comprobarAlarma()", primeraComprobacion);
+		// Dejamos de mostrar la imagen de alarma
+		document.imagenAlarma.src = "";
+	}
+
+
+	function comprobarAlarma() {
+		// Obtenemos la hora actual
+		var ahora = new Date();
+		// Si hay una alarma fijada
+		if (alarma != undefined) {
+			// Si coincide la hora actual con la alarma
+			if (ahora.getHours() == alarma.getHours() && ahora.getMinutes() == alarma.getMinutes()) {
+				// Mostramos la imagen
+				document.imagenAlarma.src = "alarma.jpg";
+				// Si quiere aplazar la alarma
+				if (confirm("¿Quiere dormir un rato más?")) {
+					// Damos un minuto de tregua
+					fijarAlarma(alarma.getHours(), alarma.getMinutes() + 1);
+				} else {
+					// En otro caso, desactivamos la alarma
+					desactivarAlarma();
+				}
+			} else {
+				// En otro caso, volvemos a comprobar en 1 minuto
+				idComprobarAlarma = setTimeout("comprobarAlarma()", 60000);
+			}
+		}
+	}
+
+	function activarAlarma() {
+		// Fijamos valores por defecto
+		var hora = 12, minutos = 00;
+		// Comprobamos los valores del formulario
+		with(document.formAlarma){
+			// Guardamos el valor de la hora, si está escrito
+			if (horaAlarma.value != "") {
+				hora = horaAlarma.value;
+			}
+			//Guardamos el valor de los minutos, si está escrito
+			if (minAlarma.value != "") {
+				minutos = minAlarma.value;
+			}
+			// Fijamos la alarma
+			fijarAlarma(hora, minutos);
+		}
+	}
+
+	function desactivarAlarma() {
+		// Dejamos de comprobar la alarma
+		clearTimeout(idComprobarAlarma);
+		// Borramos la hora fijada
+		alarma = null;
+		// Dejamos de mostrar la imagen de alarma
+		document.imagenAlarma.src = "";
+	}
+</SCRIPT>
+</HEAD>
+<BODY ONLOAD="setInterval('mostrarHora()', 1000);">
+<H3>Hora actual</H3>
+ <FORM ID="formulario1" NAME="formHora">
+ <INPUT TYPE="text" ID="entrada1" NAME="horaActual" SIZE="2" READONLY /> :
+ <INPUT TYPE="text" ID="entrada2" NAME="minActual" SIZE="2" READONLY /> :
+ <INPUT TYPE="text" ID="entrada3" NAME="segActual" SIZE="2" READONLY />
+ </FORM><BR />
+ <H3>Alarma</H3>
+ <FORM ID="formulario2" NAME="formAlarma">
+ <INPUT TYPE="text" ID="entrada4" NAME="horaAlarma" SIZE="2" /> :
+ <INPUT TYPE="text" ID="entrada5" NAME="minAlarma" SIZE="2" /> 
+<INPUT TYPE="button" ID="boton1" NAME="botonActivar" VALUE="Activar" ONCLICK="activarAlarma()" />
+ <INPUT TYPE="button" ID="boton2" NAME="botonDesactivar" VALUE="Desactivar" ONCLICK="desactivarAlarma()" />
+ </FORM>
+ 
+ <IMG ID="imagen1" NAME="imagenAlarma" SRC="" />
+</BODY>
+</HTML>

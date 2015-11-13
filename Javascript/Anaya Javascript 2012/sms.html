@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<SCRIPT TYPE="text/javascript">
+	// Declaración de constante
+	var LONGITUD_MAX = 160;
+	function calcularRestantes(texto) {
+		// Calculamos los caracteres restantes
+		var resto = LONGITUD_MAX - texto.length;
+		// Detectamos si hemos llegado al límite
+		if (resto < 0) {
+			// Sustituimos el texto actual
+			document.formSMS.sms.value = texto.substr(0, LONGITUD_MAX);
+			// Forzamos la llegada al límite
+			resto = 0;
+		}
+		// Escribimos el resultado en el formulario
+		document.formSMS.longitud.value = resto;
+	}
+</SCRIPT>
+</HEAD>
+<BODY>
+<H3>Escriba su SMS</H3>
+<FORM ID="formulario1" NAME="formSMS">
+	<TEXTAREA ID="entrada1" NAME="sms" ROWS="3" COLS="60" ONKEYUP="calcularRestantes(this.value)"></TEXTAREA>
+	Quedan <INPUT TYPE="text" ID="entrada2" NAME="longitud" SIZE="3" VALUE="160" READONLY> caracteres
+</FORM>
+</BODY>
+</HTML>

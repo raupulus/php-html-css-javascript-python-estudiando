@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<STYLE>
+	TABLE {
+		width: 500px;
+		border: 1px solid #C0C0C0;
+	}
+	TD {
+		width: 33%;
+		height: 70px;
+		border: 1px solid #C0C0C0;
+		text-align: center;
+	}
+	INPUT {
+		width: 250px;
+		margin-left: 10px;
+		margin-bottom: 5px;
+	}
+</STYLE>
+<SCRIPT TYPE="text/javascript" SRC="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></SCRIPT>
+<SCRIPT TYPE="text/javascript">
+	function modificarPorJS() {
+		// Obtenemos la celda y modificamos el texto
+		document.getElementById("celda4").innerHTML = "Modificado por JavaScript";
+	}
+	
+	function modificarPorjQuery() {
+		// Obtenemos la celda y modificamos el texto
+		$("#celda6").html("Modificado por jQuery");
+	}
+	
+	function importantesPorJS() {
+		// Obtenemos todas las celdas
+		var celdas = document.getElementsByTagName("TD");
+		for(var i = 0; i < celdas.length; i++) {
+			// Comprobamos si contiene el estilo
+			if (celdas[i].className == "importante") {
+				// Ponemos su texto en negrita
+				celdas[i].style.fontWeight = "bold";
+			}
+		}
+	}
+
+	function importantesPorjQuery() {
+		// Ponemos en negrita todas las celdas con el estilo
+		$("TD.normal").css("font-weight", "bold");
+	}
+</SCRIPT>
+
+</HEAD>
+<BODY>
+<TABLE ID="tabla">
+<TR>
+	<TD ID="celda1" CLASS="importante">Texto 1</TD>
+	<TD ID="celda2" CLASS="normal">Texto 2</TD>
+	<TD ID="celda3" CLASS="normal">Texto 3</TD>
+</TR>
+<TR>
+	<TD ID="celda4" CLASS="normal">Texto 4</TD>
+	<TD ID="celda5" CLASS="importante">Texto 5</TD>
+	<TD ID="celda6" CLASS="normal">Texto 6</TD>
+</TR>
+<TR>
+	<TD ID="celda7" CLASS="importante">Texto 7</TD>
+	<TD ID="celda8" CLASS="normal">Texto 8</TD>
+	<TD ID="celda9" CLASS="importante">Texto 9</TD>
+</TR>
+</TABLE>
+<BR />
+<INPUT TYPE="button" VALUE="Modificar celda 4 (JavaScript)" ONCLICK="modificarPorJS()">
+<INPUT TYPE="button" VALUE="Modificar celda 6 (jQuery)" ONCLICK="modificarPorjQuery()"><BR />
+<INPUT TYPE="button" VALUE="Resaltar importantes (JavaScript)" ONCLICK="importantesPorJS()">
+<INPUT TYPE="button" VALUE="Resaltar normales (jQuery)" ONCLICK="importantesPorjQuery()">
+<BR />
+<BR />
+<INPUT TYPE="button" VALUE="Volver a empezar" ONCLICK="location.reload()"
+</BODY>
+</HTML>

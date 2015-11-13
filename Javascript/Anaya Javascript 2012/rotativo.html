@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<SCRIPT TYPE="text/javascript">
+	// Variable global
+	var temporizador;
+	
+	function desplazarTexto() {
+		// Obtenemos el texto de la capa
+		var texto = document.getElementById("capaTexto").innerHTML;
+		// Trasladamos el primer carácter al final
+		texto = texto.substring(1, texto.length) + texto.substring(0, 1);
+		// Escribimos el nuevo texto
+		document.getElementById("capaTexto").innerHTML = texto;
+	}
+	
+	function arrancarRotativo() {
+		// Fijamos el temporizador
+		temporizador = setInterval("desplazarTexto()", 150);
+	}
+
+	function detenerRotativo() {
+		// Detenemos el temporizador
+		clearInterval(temporizador);
+	}
+</SCRIPT>
+</HEAD>
+<BODY ONLOAD="arrancarRotativo()">
+<DIV ID="capaTexto" STYLE="border: 1px solid #000000; width: 250px; text-align: center" ONMOUSEOVER="detenerRotativo()" ONMOUSEOUT="arrancarRotativo()">El texto que queramos desplazar</DIV>
+</BODY>
+</HTML>

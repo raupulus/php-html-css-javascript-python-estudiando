@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<STYLE>
+	INPUT {
+		width: 150px;
+		margin-left: 15px;
+	}
+</STYLE>
+<SCRIPT TYPE="text/javascript">
+	// Definición del objeto
+	function Coche(marca, modelo, color) {
+	   // Definición de propiedades
+	   this.marca = marca;
+	   this.modelo = modelo;
+	   this.color = color;
+	   // Definición de métodos
+	   this.acelerar = function () { alert("brruummmmm"); };
+	   // Acceso a propiedades desde función definida dentro
+	   this.mostrarMiColor = function() { alert("Mi color es: " + this.color); };
+	}
+	
+	function verPropiedades() {
+		// Declaración de variable
+	   var mensaje = "Valores en \"miCoche\":\n";
+	   // Sentencia for-in
+	   for (var miPropiedad in miCoche) {
+		  mensaje += "\t*  \'" + miPropiedad + "\' tiene valor: " + miCoche[miPropiedad] + "\n";
+	   }
+	   // Mostramos las propiedades y valores
+	   alert(mensaje);
+	}
+</SCRIPT>
+</HEAD>
+<BODY>
+<H3>Definición y acceso a un objeto</H3>
+<INPUT TYPE="button" VALUE="Ver propiedades" ONCLICK="verPropiedades()">
+<INPUT TYPE="button" VALUE="Acelerar" ONCLICK="miCoche.acelerar()">
+<INPUT TYPE="button" VALUE="Mostrar color" ONCLICK="miCoche.mostrarMiColor()">
+<SCRIPT TYPE="text/javascript">
+	// Declaración de la instancia
+   var miCoche = new Coche("Fiat", "Punto", "Rojo");
+</SCRIPT>
+</BODY>
+</HTML>

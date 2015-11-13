@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<SCRIPT TYPE="text/javascript" SRC="funciones_cookie.js"></SCRIPT>
+<SCRIPT TYPE="text/javascript">
+	// Declaración de variable global
+	var numeroIntentos = 0;
+
+	function comprobarAcceso() {
+		// Declaración de variables
+		var texto;
+		// Si está creada la cookie
+		if (recuperarCookie("intentosAgotados") != "") {
+			// No hacemos nada
+			return;
+		}
+		// Pedimos la contraseña al usuario
+		texto = prompt("Por favor, introduce la contraseña");
+		// Si ha pulsado Cancelar o no ha escrito nada
+		if (texto == null || texto == "") {
+			// No hacemos nada
+			return;
+		}
+		// Comparamos si la contraseña es válida
+		if (texto == "ChachiQueSi") {
+			// Redirigimos a la zona privada
+			location.href = "zona_privada.html";
+		} else {
+			// Incrementamos el número de intentos que lleva
+			numeroIntentos++;
+			// Mostramos un mensaje
+			alert("Lo siento, la contraseña no es correcta.\n" + 
+			"Te quedan " + (3 - numeroIntentos) + " intentos.");
+			// Si hemos llegado al máximo de intentos
+			if (numeroIntentos == 3) {
+				// Creamos la cookie
+				almacenarCookie("intentosAgotados", 1);
+			}
+		}
+	}
+</SCRIPT>
+</HEAD>
+<BODY>
+<H3>Lista de secciones de mi Web</H3>
+- <A HREF="fotos.html">Mis fotos</A><BR />
+- <A HREF="canciones.html">Mis canciones preferidas</A><BR />
+- <A HREF="cosas.html">Cosas que me gustan</A><BR />
+- <A HREF="javascript:void(0)" ONCLICK="comprobarAcceso()">Zona privada</A> (con contraseña)
+</BODY>
+</HTML>
