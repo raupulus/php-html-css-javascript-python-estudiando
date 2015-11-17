@@ -1,4 +1,12 @@
 /*Stylesheet para los ejercicios de Little Boxes*/
+
+body {
+	color: black;
+	background-color: #8c8c8c;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small; /*Tamaño de fuente*/
+}
+
 #encabezado {
 	color: black;
 	background-color: #f3c600;
