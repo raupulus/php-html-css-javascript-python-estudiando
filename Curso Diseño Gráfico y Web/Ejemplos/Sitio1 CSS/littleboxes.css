@@ -3,11 +3,50 @@
 body {
 	color: black;
 	background-color: #8c8c8c;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-family: verdana, Arial, Helvetica, sans-serif;
 	font-size: small; /*Tamaño de fuente*/
 }
 
 #encabezado {
 	color: black;
 	background-color: #f3c600;
+}
+
+#encabezado IMG {
+	background-color: white;
+}
+
+H1 {
+	font-size: 150%;
+}
+
+H2 {
+	font-size: 130%;
+}
+
+ADDRESS {
+	text-align: center; /*centrar*/
+	font-size: 80%;
+	font-style: normal;
+	letter-spacing: 2px;
+	line-height: 1.5em;
+}
+A {
+	text-decoration: none;
+}
+A:link {
+	color:#d90000;
+}
+A:visited {
+	color: #cc6666;
+}
+A:hover, A:focus {
+	text-decoration: underline;
+}
+A:active {
+	color: white;
+	background-color: #d90000;
+}
+.skipline {
+	display: none;
 }
