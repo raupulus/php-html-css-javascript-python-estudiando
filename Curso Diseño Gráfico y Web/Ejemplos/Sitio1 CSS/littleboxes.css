@@ -12,6 +12,12 @@ body {
 	font-size: small; /*Tamaño de fuente*/
 }
 
+#wrapper {
+	color:black;
+	background-color: white;
+	width:720px;/*Anchura del área de contenido*/
+}
+
 #encabezado {
 	color: black;
 	background-color: #f3c600;
@@ -27,6 +33,7 @@ H1 {
 
 H2 {
 	font-size: 130%;
+	margin-bottom: 1em;
 }
 
 ADDRESS {
@@ -54,4 +61,22 @@ A:active {
 }
 .skipline {
 	display: none;
+}
+
+P, UL {
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 1em; /*Margen inferior*/
+	margin-left:0;
+}
+
+UL UL {
+	margin:0;
+}
+
+LI {
+	margin-top:0;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 1em; /*Margen izquierdo*/
 }
