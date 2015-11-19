@@ -1,0 +1,75 @@
+
+
+#inicio {
+	border:5px solid black;
+	background-color: blanchedalmond;
+	padding: 0;
+}
+
+H1 {
+	align-content: center;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 2.3em;
+	color:darkkhaki;
+}
+
+#wrapper {
+	background-color: coral;
+}
+
+#cabecera {
+	background-color:beige;
+	padding-top: 5px;
+}
+
+#menu_principal LI {
+	list-style-type: square;
+	color: yellow;
+}
+
+#menu_principal A {
+	text-decoration: none;
+	color: greenyellow;
+}
+
+#menu_secundario LI{
+	list-style-type: none;
+	text-align: center;
+}
+
+#menu_secundario A{
+	text-decoration: none;
+	color: dimgray;
+	font-family: monospace;
+	font-size: 1.2em;
+}
+
+#contenido {
+	margin: 10px;
+	padding: 5px;
+	background-color: cadetblue;
+	align-content: center;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#pie {
+	background-color: black;
+	padding: 5px;
+}
+
+/*Clases para el contenido*/
+.estilo1 {
+	margin: 23px;
+	font-family: monospace;
+}
+
+.estilo2 {
+	margin: 7px;
+	font-family:monospace;
+	text-align: right;
+	color: aliceblue;
+	background-color: dimgray;
+	padding: 8px;
+}
