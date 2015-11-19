@@ -16,15 +16,53 @@ body {
 	color:black;
 	background-color: white;
 	width:720px;/*Anchura del área de contenido*/
+	margin-top: 10px;
+	margin-right:auto;
+	margin-bottom: 10px;
+	margin-left: auto;
 }
 
 #encabezado {
 	color: black;
 	background-color: #f3c600;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 0;
+	padding-left: 20px;
+	background-image: url(encabezado_bg_rep.jpg);
 }
 
 #encabezado IMG {
 	background-color: white;
+	padding: 5px;
+	border: 5px solid #d9d9d9;
+}
+
+#pie{
+	padding-top: 10px;
+	border-top: 1px solid #8c8c8c;
+	margin-top: 20px;
+}
+
+#navegacion {
+	padding-top: 5px;
+	padding-right: 20px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+}
+
+#areatexto {
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+}
+
+#pie {
+	padding: 20px;
+	padding-top: 10px;
+	border-top: 1px solid #A9122A;
+	margin-top: 20px;
 }
 
 H1 {
