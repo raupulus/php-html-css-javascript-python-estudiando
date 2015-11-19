@@ -4,21 +4,30 @@
 		<TITLE>Titulo</TITLE>
 		<META charset="utf-8"/>
 		<SCRIPT>
-			var maximo
-			var alien
-			maximo = 22
-			alien = "No ha cambiado el valor"
+			var maximo;
+			var alien;
+			var guardovariables;
+			maximo = 22;
+			alien = "No ha cambiado el valor";
+			guardovariables = 0;
 			
 			function uno() {
 				if (maximo < 30) {
-					alien = "Ha cambiado el valor"
+					alien = "Ha cambiado el valor";
+					guardovariables = guardovariables + 9;
 				}
-				alert(alien)
+				alert(alien);
+			}
+			
+			function dos() {
+				maximo = maximo + 10;
+				alert(maximo);
 			}
 		</SCRIPT>
 	</HEAD>
 	
 	<BODY>
 		<INPUT type="button" onClick="uno()" value="pulsar"/>
+		<INPUT type="button" onClick="dos()" value="Función DOS"/>
 	</BODY>
 </HTML>
