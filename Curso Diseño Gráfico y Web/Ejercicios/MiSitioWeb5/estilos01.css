@@ -21,6 +21,7 @@ H1 {
 #cabecera {
 	background-color:mediumaquamarine;
 	padding-top: 5px;
+	border-bottom: 5px double black;
 }
 
 #menu_principal LI {
@@ -57,6 +58,7 @@ H1 {
 #pie {
 	background-color: black;
 	padding: 5px;
+	border-top: 4px dotted white;
 }
 
 /*Clases para el contenido*/
