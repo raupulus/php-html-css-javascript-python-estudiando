@@ -34,6 +34,10 @@ H1 {
 	color: greenyellow;
 }
 
+#menu_principal A:hover {
+	color: red;
+}
+
 #menu_secundario LI{
 	list-style-type: none;
 	text-align: center;
@@ -45,6 +49,12 @@ H1 {
 	font-family: monospace;
 	font-size: 1.2em;
 }
+
+#menu_secundario A:hover{
+	color: orange;
+	font-size: 1.23em;
+}
+
 
 #contenido {
 	margin: 10px;
