@@ -38,6 +38,11 @@ body {
 	border: 5px solid #d9d9d9;
 }
 
+#encabezado P {
+	padding: 5px 0 5px 0;
+	margin-bottom: 0;
+}
+
 #pie{
 	padding-top: 10px;
 	border-top: 1px solid #8c8c8c;
@@ -45,10 +50,43 @@ body {
 }
 
 #navegacion {
-	padding-top: 5px;
-	padding-right: 20px;
+	text-align: right;
+	color: black;
+	background-color: #f3c600;
+	background-image: url(encabezado_bg_rep.jpg);
+	background-repeat: repeat-y;
+	background-position: top left;
+	padding: 5px 10px 4px 10px;
+	border-bottom: 1px solid #8c8c8c
+}
+
+#navegacion A {
+	color: black;
+	background-color: #ffeda0;
+	padding: 4px 8px 4px 8px;
+	border: 1px solid #8c8c8c;
+}
+
+#navegacion A:active {
+	background-color: white;
+}
+
+#navegacion A:hover {
+	text-decoration: none;
+	color: black;
+	background-color: white;
 	padding-bottom: 5px;
-	padding-left: 20px;
+	border-bottom: none;
+}
+
+#navegacion UL {
+	margin-bottom: 0;
+}
+
+#navegacion LI {
+	display: inline;
+	list-style-type: none;
+	margin: 0;
 }
 
 #areatexto {
@@ -81,6 +119,8 @@ ADDRESS {
 	letter-spacing: 2px;
 	line-height: 1.5em;
 }
+
+
 A {
 	text-decoration: none;
 }
@@ -97,6 +137,8 @@ A:active {
 	color: white;
 	background-color: #d90000;
 }
+
+
 .skipline {
 	display: none;
 }
