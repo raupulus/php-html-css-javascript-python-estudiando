@@ -71,7 +71,7 @@ body {
 	background-color: white;
 }
 
-#navegacion A:hover {
+#navegacion A:hover, #inicio #navi01 A; #pagcontacto #navi02 A {
 	text-decoration: none;
 	color: black;
 	background-color: white;
