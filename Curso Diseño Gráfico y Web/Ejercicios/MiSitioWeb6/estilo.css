@@ -58,6 +58,8 @@ body {
 	text-decoration: none;
 	color: whitesmoke;
 	padding: 0 20px;
+	border-left: 2px solid white;
+	border-right: 2px solid white;
 }
 #navegacion UL LI A:hover{
 	color: black;
