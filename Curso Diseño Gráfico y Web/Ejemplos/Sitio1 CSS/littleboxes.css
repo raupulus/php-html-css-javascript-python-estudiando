@@ -23,6 +23,7 @@ body {
 }
 
 #encabezado {
+	position: relative;
 	color: black;
 	background-color: #f3c600;
 	padding-top: 10px;
@@ -39,8 +40,15 @@ body {
 }
 
 #encabezado P {
+	position: absolute;
+	top:10px;
+	right: 10px;
+	font-weight: bold;
 	padding: 5px 0 5px 0;
 	margin-bottom: 0;
+}
+#encabezado P SPAN {
+	color: #d90000;
 }
 
 #pie{
