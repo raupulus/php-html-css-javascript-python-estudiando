@@ -58,21 +58,14 @@ body {
 }
 
 #navegacion {
-	text-align: right;
-	color: black;
-	background-color: #f3c600;
-	background-image: url(encabezado_bg_rep.jpg);
-	background-repeat: repeat-y;
-	background-position: top left;
-	padding: 5px 10px 4px 10px;
-	border-bottom: 1px solid #8c8c8c
+	float: left;
+	width: 130px;
+	padding-left: 10px;
+	padding-top: 20px;
 }
 
 #navegacion A {
-	color: black;
-	background-color: #ffeda0;
-	padding: 4px 8px 4px 8px;
-	border: 1px solid #8c8c8c;
+	
 }
 
 #navegacion A:active {
@@ -80,21 +73,14 @@ body {
 }
 
 #navegacion A:hover, #inicio #navi01 A; #pagcontacto #navi02 A {
-	text-decoration: none;
-	color: black;
-	background-color: white;
-	padding-bottom: 5px;
-	border-bottom: none;
+	
 }
 
 #navegacion UL {
-	margin-bottom: 0;
 }
 
 #navegacion LI {
-	display: inline;
 	list-style-type: none;
-	margin: 0;
 }
 
 #areatexto {
