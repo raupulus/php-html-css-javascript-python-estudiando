@@ -1,0 +1,67 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	width: 1024px;
+	margin: auto;
+}
+
+#header {
+	width: 100%;
+	height: 100px;
+	padding-top: 15px;
+	background-color: red;
+	text-align: center;
+	font-size: 2em
+}
+
+#navegacion {
+	width: 340px;
+	height: 305px;
+	float: left;
+	background-color: yellowgreen;
+}
+#navegacion LI {
+	list-style-type: none;
+	padding: 20px 7px;
+}
+#navegacion A {
+	text-decoration: none;
+}
+
+#cuerpo {
+	width: 340px;
+	height: 305px;
+	float: left;
+	background-color: yellow;
+}
+
+#pub01 {
+	display: inline-block;
+	width: 344px;
+	height: 150px;
+	background-color: cadetblue;
+}
+
+#pub02 {
+	display: inline-block;
+	width: 344px;
+	height: 150px;
+	background-color: dodgerblue;
+}
+
+#pie01 {
+	width: 510px;
+	height: 80px;
+	float: left;
+	background-color: orange;
+}
+
+#pie02 {
+	width: 510px;
+	height: 80px;
+	float: right;
+	background-color: darkgoldenrod;
+}
