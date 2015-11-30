@@ -18,8 +18,8 @@ body {
 }
 
 #navegacion {
-	width: 340px;
-	height: 305px;
+	width: 140px;
+	height: 405px;
 	float: left;
 	background-color: yellowgreen;
 }
@@ -32,23 +32,38 @@ body {
 }
 
 #cuerpo {
-	width: 340px;
-	height: 305px;
+	width: 600px;
+	height: 365px;
+	padding: 20px;
 	float: left;
 	background-color: yellow;
+}
+#cuerpo TABLE {
+	margin: auto;
+}
+#cuerpo TH {
+	padding-bottom: 10px;
+	text-align: center;
+	font-size: 1.2em;
+	font-family: monospace;
+}
+#cuerpo TD {
+	width: 30%;
+	padding: 10px;
+	border: 3px solid black;
 }
 
 #pub01 {
 	display: inline-block;
-	width: 344px;
-	height: 150px;
+	width: 244px;
+	height: 200px;
 	background-color: cadetblue;
 }
 
 #pub02 {
 	display: inline-block;
-	width: 344px;
-	height: 150px;
+	width: 244px;
+	height: 200px;
 	background-color: dodgerblue;
 }
 
