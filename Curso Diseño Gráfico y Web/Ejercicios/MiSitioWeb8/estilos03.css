@@ -69,14 +69,18 @@ body {
 
 #pie01 {
 	width: 510px;
-	height: 80px;
+	height: 50px;
 	float: left;
+	text-align: center;
+	padding-top: 20px;
 	background-color: orange;
 }
 
 #pie02 {
 	width: 510px;
-	height: 80px;
+	height: 50px;
 	float: right;
+	text-align: center;
+	padding-top: 20px;
 	background-color: darkgoldenrod;
 }
