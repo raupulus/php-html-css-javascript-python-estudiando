@@ -19,7 +19,7 @@ body {
 
 #navegacion {
 	width: 140px;
-	height: 405px;
+	height: 2005px;
 	float: left;
 	background-color: yellowgreen;
 }
@@ -33,7 +33,7 @@ body {
 
 #cuerpo {
 	width: 600px;
-	height: 365px;
+	height: 1965px;
 	padding: 20px;
 	float: left;
 	background-color: yellow;
@@ -56,14 +56,14 @@ body {
 #pub01 {
 	display: inline-block;
 	width: 244px;
-	height: 200px;
+	height: 1002px;
 	background-color: cadetblue;
 }
 
 #pub02 {
 	display: inline-block;
 	width: 244px;
-	height: 200px;
+	height: 1002px;
 	background-color: dodgerblue;
 }
 
