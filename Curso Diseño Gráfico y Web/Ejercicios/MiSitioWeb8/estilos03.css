@@ -9,18 +9,30 @@ body {
 }
 
 #header {
-	width: 100%;
+	width: 1015px;
 	height: 100px;
-	padding-top: 15px;
+	padding: 5px;
+	margin: 0 0 2px 0;
 	background-color: red;
+	
+}
+#header H1 {
 	text-align: center;
-	font-size: 2em
+	font-size: 4.7em;
+	float: left;
+	margin-left: 50px;
+}
+#header IMG {
+	float: right;
+	margin-right: 20px;	
 }
 
 #navegacion {
 	width: 140px;
-	height: 2005px;
+	height: 1965px;
 	float: left;
+	padding: 5px;
+	margin: 2px 2px 2px 0;
 	background-color: yellowgreen;
 }
 #navegacion LI {
@@ -29,12 +41,21 @@ body {
 }
 #navegacion A {
 	text-decoration: none;
+	border: 1px solid red;
+}
+#navegacion A:hover {
+	color: antiquewhite;
+	background-color: orangered;
+}
+#paginicio #inicio, #pagnoticias #noticias, #pagcontacto #contacto {
+	background-color: orangered;
 }
 
 #cuerpo {
 	width: 600px;
-	height: 1965px;
-	padding: 20px;
+	height: 1968px;
+	padding: 5px;
+	margin: 2px;
 	float: left;
 	background-color: yellow;
 }
@@ -42,45 +63,72 @@ body {
 	margin: auto;
 }
 #cuerpo TH {
-	padding-bottom: 10px;
+	padding: 7px 5px 8px 4px;
 	text-align: center;
 	font-size: 1.2em;
 	font-family: monospace;
+	color: greenyellow;
+	background-color: black;
 }
 #cuerpo TD {
 	width: 30%;
 	padding: 10px;
 	border: 3px solid black;
+	color: cornflowerblue;
+	background-color: darkslateblue;
 }
 
 #pub01 {
-	display: inline-block;
+	float: right;
 	width: 244px;
-	height: 1002px;
+	height: 977px;
+	margin: 2px 0 2px 2px;
+	padding: 5px;
 	background-color: cadetblue;
 }
 
 #pub02 {
-	display: inline-block;
+	float: right;
 	width: 244px;
-	height: 1002px;
+	height: 977px;
+	margin: 2px 0 2px 2px;
+	padding: 5px;
 	background-color: dodgerblue;
 }
 
 #pie01 {
-	width: 510px;
+	width: 500px;
 	height: 50px;
 	float: left;
 	text-align: center;
-	padding-top: 20px;
+	font-family: monospace;
+	margin: 2px 2px 0 0;
+	padding: 5px;
 	background-color: orange;
 }
 
 #pie02 {
-	width: 510px;
+	width: 500px;
 	height: 50px;
 	float: right;
 	text-align: center;
-	padding-top: 20px;
+	margin: 2px 0 0 2px;
+	padding: 5px;
 	background-color: darkgoldenrod;
+}
+#pie02 LI {
+	display: inline-block;
+	margin-top: 10px;
+}
+#pie02 A {
+	text-decoration: none;
+	color: aliceblue;
+	font-size: 1.6em;
+}
+#pie02 A:hover {
+	color: aquamarine;
+	background-color: black;
+}
+#paginicio #pieinicio, #pagnoticias #pienoticias, #pagcontacto #piecontacto {
+	background-color: black;
 }
