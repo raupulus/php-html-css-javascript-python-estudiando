@@ -6,6 +6,7 @@
 body {
 	width: 1024px;
 	margin: auto;
+	background-color: black;
 }
 
 #header {
@@ -13,7 +14,9 @@ body {
 	height: 100px;
 	padding: 5px;
 	margin: 0 0 2px 0;
+	color: white;
 	background-color: red;
+	background-image: url(head.jpg)
 	
 }
 #header H1 {
@@ -28,36 +31,51 @@ body {
 }
 
 #navegacion {
-	width: 140px;
-	height: 1965px;
+	width: 190px;
+	height: 1165px;
 	float: left;
-	padding: 5px;
+	padding: 5px 0;
 	margin: 2px 2px 2px 0;
-	background-color: yellowgreen;
+	background-color: white;
+	background-image: url(tribal.jpg);
+	background-size: 100%;
 }
 #navegacion LI {
+	margin: 5px auto;
+	text-align: center;
 	list-style-type: none;
 	padding: 20px 7px;
+	background-color: #151515;
+	border-top: 7px ridge darkslateblue;
+	border-bottom: 7px ridge darkslateblue;
+	opacity: 0.9;
 }
 #navegacion A {
+	width: 100px;
+	padding: 8px;
+	color: orangered;
+	font-size: 1.4em;
 	text-decoration: none;
-	border: 1px solid red;
+	border: 10px ridge darkslateblue;
+	background-color: white;
 }
 #navegacion A:hover {
 	color: antiquewhite;
+	font-style: oblique;
 	background-color: orangered;
 }
 #paginicio #inicio, #pagnoticias #noticias, #pagcontacto #contacto {
-	background-color: orangered;
+	background-color: darkslateblue;
+	color: aliceblue;
 }
 
 #cuerpo {
 	width: 600px;
-	height: 1968px;
+	height: 1168px;
 	padding: 5px;
 	margin: 2px;
 	float: left;
-	background-color: yellow;
+	background-color: cornflowerblue;
 }
 #cuerpo TABLE {
 	margin: auto;
@@ -71,29 +89,32 @@ body {
 	background-color: black;
 }
 #cuerpo TD {
-	width: 30%;
-	padding: 10px;
+	padding: 3px;
 	border: 3px solid black;
-	color: cornflowerblue;
+	color: powderblue;
 	background-color: darkslateblue;
 }
 
 #pub01 {
 	float: right;
-	width: 244px;
-	height: 977px;
+	width: 194px;
+	height: 577px;
 	margin: 2px 0 2px 2px;
 	padding: 5px;
 	background-color: cadetblue;
+	background-image: url(pub01.jpg);
+	background-size: 100%;
 }
 
 #pub02 {
 	float: right;
-	width: 244px;
-	height: 977px;
+	width: 194px;
+	height: 577px;
 	margin: 2px 0 2px 2px;
 	padding: 5px;
 	background-color: dodgerblue;
+	background-image: url(pub02.jpg);
+	background-size: 100%;
 }
 
 #pie01 {
