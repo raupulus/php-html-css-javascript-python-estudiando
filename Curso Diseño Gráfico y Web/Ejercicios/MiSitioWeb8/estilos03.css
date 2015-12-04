@@ -1,0 +1,155 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	width: 1024px;
+	margin: auto;
+	background-color: black;
+}
+
+#header {
+	width: 1015px;
+	height: 100px;
+	padding: 5px;
+	margin: 0 0 2px 0;
+	color: white;
+	background-color: red;
+	background-image: url(head.jpg);
+	background-size: 100% 100%;
+}
+#header H1 {
+	text-align: center;
+	font-size: 4.7em;
+	float: left;
+	margin-left: 50px;
+}
+#header IMG {
+	float: right;
+	margin-right: 20px;	
+}
+
+#navegacion {
+	width: 190px;
+	height: 1165px;
+	float: left;
+	padding: 5px 0;
+	margin: 2px 2px 2px 0;
+	background-color: white;
+	background-image: url(tribal.jpg);
+	background-size: 100% 100%;
+}
+#navegacion LI {
+	margin: 5px auto;
+	text-align: center;
+	list-style-type: none;
+	padding: 20px 7px;
+	background-color: #151515;
+	border-top: 7px ridge darkslateblue;
+	border-bottom: 7px ridge darkslateblue;
+	opacity: 0.9;
+}
+#navegacion A {
+	width: 100px;
+	padding: 8px;
+	color: orangered;
+	font-size: 1.4em;
+	text-decoration: none;
+	border: 10px ridge darkslateblue;
+	background-color: white;
+}
+#navegacion A:hover {
+	color: antiquewhite;
+	font-style: oblique;
+	background-color: orangered;
+}
+#paginicio #inicio, #pagnoticias #noticias, #pagcontacto #contacto {
+	background-color: darkslateblue;
+	color: aliceblue;
+}
+
+#cuerpo {
+	width: 600px;
+	height: 1168px;
+	padding: 5px;
+	margin: 2px;
+	float: left;
+	background-color: cornflowerblue;
+}
+#cuerpo TABLE {
+	margin: auto;
+}
+#cuerpo TH {
+	padding: 7px 5px 8px 4px;
+	text-align: center;
+	font-size: 1.2em;
+	font-family: monospace;
+	color: greenyellow;
+	background-color: black;
+}
+#cuerpo TD {
+	padding: 3px;
+	border: 3px solid black;
+	color: powderblue;
+	background-color: darkslateblue;
+}
+
+#pub01 {
+	float: right;
+	width: 194px;
+	height: 577px;
+	margin: 2px 0 2px 2px;
+	padding: 5px;
+	background-color: cadetblue;
+	background-image: url(pub01.jpg);
+	background-size: 100% 100%;
+}
+
+#pub02 {
+	float: right;
+	width: 194px;
+	height: 577px;
+	margin: 2px 0 2px 2px;
+	padding: 5px;
+	background-color: dodgerblue;
+	background-image: url(pub02.jpg);
+	background-size: 100% 100%;
+}
+
+#pie01 {
+	width: 500px;
+	height: 50px;
+	float: left;
+	text-align: center;
+	font-family: monospace;
+	margin: 2px 2px 0 0;
+	padding: 5px;
+	background-color: orange;
+}
+
+#pie02 {
+	width: 500px;
+	height: 50px;
+	float: right;
+	text-align: center;
+	margin: 2px 0 0 2px;
+	padding: 5px;
+	background-color: darkgoldenrod;
+}
+#pie02 LI {
+	display: inline-block;
+	margin-top: 10px;
+}
+#pie02 A {
+	text-decoration: none;
+	color: aliceblue;
+	font-size: 1.6em;
+}
+#pie02 A:hover {
+	color: aquamarine;
+	background-color: black;
+}
+#paginicio #pieinicio, #pagnoticias #pienoticias, #pagcontacto #piecontacto {
+	background-color: black;
+}

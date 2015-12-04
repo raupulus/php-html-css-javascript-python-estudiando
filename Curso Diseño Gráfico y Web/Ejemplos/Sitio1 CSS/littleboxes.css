@@ -16,20 +16,17 @@ body {
 	color:black;
 	background-color: white;
 	width:720px;/*Anchura del área de contenido*/
-	margin-top: 10px;
-	margin-right:auto;
-	margin-bottom: 10px;
-	margin-left: auto;
+	margin: 10px auto;
+	background-image: url(navi_bg_solid.jpg);
+	background-repeat: repeat-y;
+	background-position: top left;
 }
 
 #encabezado {
-	color: black;
+	position: relative;
+	color: #000;
 	background-color: #f3c600;
-	padding-top: 10px;
-	padding-right: 20px;
-	padding-bottom: 0;
-	padding-left: 20px;
-	background-image: url(encabezado_bg_rep.jpg);
+	padding: 10px 20px 10px 20px;
 }
 
 #encabezado IMG {
@@ -39,53 +36,65 @@ body {
 }
 
 #encabezado P {
+	position: absolute;
+	top:10px;
+	right: 10px;
+	font-weight: bold;
 	padding: 5px 0 5px 0;
 	margin-bottom: 0;
 }
+#encabezado P SPAN {
+	color: #d90000;
+}
 
 #pie{
+	background-color: white;
+	padding: 20px;
 	padding-top: 10px;
-	border-top: 1px solid #8c8c8c;
+	border-top: 1px solid #5c743d;
 	margin-top: 20px;
 }
 
 #navegacion {
-	text-align: right;
-	color: black;
-	background-color: #f3c600;
-	background-image: url(encabezado_bg_rep.jpg);
-	background-repeat: repeat-y;
-	background-position: top left;
-	padding: 5px 10px 4px 10px;
-	border-bottom: 1px solid #8c8c8c
+	float: left;
+	width: 130px;
+	padding-left: 10px;
+	padding-top: 20px;
+}
+
+#navegacion #navi01 {
+	border-top: 1px solid #d90000;
 }
 
 #navegacion A {
+	display: block;
+	text-decoration: none;
 	color: black;
-	background-color: #ffeda0;
-	padding: 4px 8px 4px 8px;
-	border: 1px solid #8c8c8c;
+	padding: 4px;
+	border-left: 3px solid white;
 }
 
 #navegacion A:active {
 	background-color: white;
 }
 
-#navegacion A:hover, #inicio #navi01 A; #pagcontacto #navi02 A {
-	text-decoration: none;
+#navegacion A:hover, #inicio #navi01 A, #pagcontacto #navi02 A {
 	color: black;
 	background-color: white;
-	padding-bottom: 5px;
-	border-bottom: none;
+	border-left: 3px solid #d90000;
 }
 
 #navegacion UL {
-	margin-bottom: 0;
+	color: black;
+	width:  80px;
+	padding-left: 10px;
+	margin-left: 0;
 }
 
 #navegacion LI {
-	display: inline;
 	list-style-type: none;
+	border-left: 1px solid #d90000;
+	border-bottom: 1px solid #d90000;
 	margin: 0;
 }
 
@@ -94,6 +103,21 @@ body {
 	padding-right: 10px;
 	padding-bottom: 20px;
 	padding-left: 20px;
+	margin-left: 130px;
+}
+.imgizda {
+	float: left;
+	padding: 3px;
+	border: 5px solid #ccc;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.imgdcha {
+	float: right;
+	padding: 3px;
+	border: 5px solid #ccc;
+	margin-bottom: 10px;
+	margin-left: 10px;
 }
 
 #pie {

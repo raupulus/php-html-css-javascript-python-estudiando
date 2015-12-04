@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	float: left;
+	width: 100%;
+}
+#cajageneral {
+	width: 1024px;
+	margin: auto;
+	background-color: blue;
+}
+
+#head {
+	background-color: orange;
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid black;
+	align-content: center;
+	text-align: center;
+}
+#cajacontenido {
+	background-color: red;
+}
+.contenidos {
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid black;
+	background-color: chartreuse;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#contenidoIZQ {
+	width: 314px;
+}
+#contenidoDRH {
+	width: 660px;
+}
+
+#cajapie {
+	width: 1024px;
+	background-color: dimgrey;
+}
+.pie {
+	margin: 5px;
+	padding: 5px;
+	width: 316px;
+	display: inline-block;
+	background-color: brown;
+	border: 1px solid black;
+	text-align: center;
+}

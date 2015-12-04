@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<TITLE>Mi sitio WEB - Página principal</TITLE>
+		<META charset="utf-8"/>
+		<LINK href="estilos03.css" rel="stylesheet" type="text/css"/>
+	</HEAD>
+	
+	<BODY id="paginicio">
+		<DIV id="header">
+			<H1>Mi sitio web</H1>
+			<IMG src="logo.png" alt="logo"/>
+		</DIV>
+		
+		<DIV id="navegacion">
+			<UL>
+				<LI><A href="index.html" id="inicio">Inicio</A></LI>
+				<LI><A href="noticias.html" id="noticias">Noticias</A></LI>
+				<LI><A href="contacto.html" id="contacto">Contacto</A></LI>
+			</UL>
+		</DIV>
+		
+		<DIV id="cuerpo">
+			<TABLE>
+				<TR>
+					<TH>Nombre del atributo</TH>
+					<TH>Descripción</TH>
+					<TH>Ejemplo</TH>
+				</TR>
+				
+				<TR>
+					<TD>background-color</TD>
+					<TD>Cambia el color de fondo, se puede expresar el color en hexadecimal o por el nombre de color si es uno de los que está predefinido</TD>
+					<TD>background-color:red
+						<BR/>
+						background-color:#fafafa;
+					</TD>
+				</TR>
+				
+				<TR>
+					<TD>width</TD>
+					<TD>Esta propiedad cambia el tamaño del ancho para un elemento, se puede expresar en porcentaje, pixeles, em, puntos...</TD>
+					<TD>width:120px;
+						<BR/>
+						width:33%;
+					</TD>
+				</TR>
+				
+				<TR>
+					<TD>padding</TD>
+					<TD>Designa el espacio entre un elemento y su contenido, es decir, es el espacio que dejará respecto al borde del contenedor un elemento interno. Al igual que width y la mayoría de las propiedades CSS se puede expresar en pixeles, porcentaje...</TD>
+					<TD>padding: 20px
+						<BR/>
+						También es posible designar cada lada independientemente:
+						<BR/>
+						padding-top:20px;
+						<BR/>
+						padding-right:20px;
+						<BR/>
+						padding-bottom:20px;
+						<BR/>
+						padding-left:20px;
+						<BR/>
+					</TD>
+				</TR>
+				
+				<TR>
+					<TD>float</TD>
+					<TD>Permite designar como flotante una caja la cual pasará a ser un elemento de bloque que se adaptará (flotará) respecto a otras cajas mientras haya espacio. Es posible declarar que flote a la derecha (right) o a la izquierda (left)</TD>
+					<TD>float:left;</TD>
+				</TR>
+				
+				<TR>
+					<TD>display</TD>
+					<TD>Es el modo de comportamiento para la caja, permitiendo o forzando ser un elemento de bloque (block) o elemento de linea (inline) incluso mezclar ambos (inline-block)</TD>
+					<TD>display:block;
+						<BR/>
+						display: inline;
+						<BR/>
+						display:inline-block;
+					</TD>
+				</TR>
+				
+				<TR>
+					<TD>#nombredeseccion</TD>
+					<TD>Es un identificador único que permite acceder a un elemento previamente designado con este. Se tiene que aplicar en HTML como atributo de la etiqueta</TD>
+					<TD>id="nombre_del_identificador"</TD>
+				</TR>
+				
+				<TR>
+					<TD>text-decoration</TD>
+					<TD>Nos deja establecer la decoración del texto como el subrayado, tachado... e incluso no tener decoración (none)</TD>
+					<TD>text-decoration:none;
+						<BR/>
+						text-decoration:underline;
+						<BR/>
+						text-decoration:overline;
+					</TD>
+				</TR>
+				
+				<TR>
+					<TD>.nombredeclase</TD>
+					<TD>Establece un selector de clase aplicable a varios elementos, permite cambiar de una vez varios elementos indistintamente de donde se encuentren en el documento HTML. Se designa como atributo de una etiqueta HTML con el atributo "class" y desde la hoja de estilos CSS lo llamamos con un punto delante del nombre ".nombredeclase"</TD>
+					<TD>class="nombredeclase"</TD>
+				</TR>
+				
+				<TR>
+					<TD>font-family</TD>
+					<TD>Cambia la fuente de texto por la elegida</TD>
+					<TD>font-family:monospace;</TD>
+				</TR>
+				
+				<TR>
+					<TD>border</TD>
+					<TD>Establece o elimina un borde para el elemento. Se puede designar de una sola vez el tamaño en pixeles, el tipo de borde (solid, groove...) y el color tanto en hexadecimal como por su nombre si es de los reconocidos</TD>
+					<TD>border: 1px solid black;
+						<BR/>
+						border: 3px groove #fafafa;
+					</TD>
+				</TR>
+			</TABLE>
+		</DIV>
+		
+		<DIV id="pub01">
+			Publicidad 1
+			<BR/>
+			Caja:	pub01
+		</DIV>
+		
+		<DIV id="pub02">
+			Publicidad 2
+			<BR/>
+			Caja:	pub02
+		</DIV>
+		
+		<DIV id="pie01">
+			Sitio Web creado por:
+			<BR/>
+			Raúl Caro Pastorino
+			<BR/>
+			Para el Curso desarrollo web 2015
+		</DIV>
+		
+		<DIV id="pie02">
+			<UL>
+				<LI><A href="index.html" id="pieinicio">Inicio</A></LI>
+				<LI><A href="noticias.html" id="pienoticias">Noticias</A></LI>
+				<LI><A href="contacto.html" id="piecontacto">Contacto</A></LI>
+			</UL>
+		</DIV>
+	</BODY>
+</HTML>
