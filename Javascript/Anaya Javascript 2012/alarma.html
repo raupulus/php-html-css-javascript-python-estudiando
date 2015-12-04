@@ -16,12 +16,12 @@
 	}
 
 	function fijarAlarma(hora, minutos) {
-		// Declaración de variables
+		// DeclaraciÃ³n de variables
 		var ahora, primeraComprobacion;	
 		// Fijamos la alarma
 		alarma = new Date();
 		alarma.setHours(hora, minutos);
-		// Preparamos la primera comprobación de alarma
+		// Preparamos la primera comprobaciÃ³n de alarma
 		ahora = new Date();
 		primeraComprobacion = (60 - ahora.getSeconds()) * 1000;
 		idComprobarAlarma = setTimeout("comprobarAlarma()", primeraComprobacion);
@@ -40,7 +40,7 @@
 				// Mostramos la imagen
 				document.imagenAlarma.src = "alarma.jpg";
 				// Si quiere aplazar la alarma
-				if (confirm("¿Quiere dormir un rato más?")) {
+				if (confirm("Â¿Quiere dormir un rato mÃ¡s?")) {
 					// Damos un minuto de tregua
 					fijarAlarma(alarma.getHours(), alarma.getMinutes() + 1);
 				} else {
@@ -59,11 +59,11 @@
 		var hora = 12, minutos = 00;
 		// Comprobamos los valores del formulario
 		with(document.formAlarma){
-			// Guardamos el valor de la hora, si está escrito
+			// Guardamos el valor de la hora, si estÃ¡ escrito
 			if (horaAlarma.value != "") {
 				hora = horaAlarma.value;
 			}
-			//Guardamos el valor de los minutos, si está escrito
+			//Guardamos el valor de los minutos, si estÃ¡ escrito
 			if (minAlarma.value != "") {
 				minutos = minAlarma.value;
 			}

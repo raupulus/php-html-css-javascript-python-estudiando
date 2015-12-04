@@ -7,7 +7,7 @@ function Tablero() {
 	this.turno;
 	this.numMovimientos;
 
-	// Lista de métodos
+	// Lista de mÃ©todos
 	this.inicializarTablero = function (){
 		// Declaramos las variables
 		var azar = Math.round(Math.random());
@@ -24,7 +24,7 @@ function Tablero() {
 		} else {
 			this.turno = "X";
 		}
-		// Reiniciamos el número de movimientos
+		// Reiniciamos el nÃºmero de movimientos
 		this.numMovimientos = 0;
 	}
 	this.detectarLineaDiagonal  = function () {
@@ -48,7 +48,7 @@ function Tablero() {
 				document.getElementById("casilla20").innerHTML = this.casillas[2][0].bold();
 				return true;
 		}
-		// En otro caso, no hemos encontrado una línea
+		// En otro caso, no hemos encontrado una lÃ­nea
 		return false;
 	}
 	this.detectarLineaHorizontal  = function () {
@@ -64,7 +64,7 @@ function Tablero() {
 					return true;
 			}
 		}
-		// En otro caso, no hemos encontrado una línea
+		// En otro caso, no hemos encontrado una lÃ­nea
 		return false;
 	}
 	this.detectarLineaVertical  = function () {
@@ -80,7 +80,7 @@ function Tablero() {
 					return true;
 			}
 		}
-		// En otro caso, no hemos encontrado una línea
+		// En otro caso, no hemos encontrado una lÃ­nea
 		return false;
 	}
 	this.detectarLinea = function () {
@@ -94,7 +94,7 @@ function Tablero() {
 			// Finalizamos la partida
 			this.numMovimientos = 9;
 			// Damos la enhorabuena
-			alert("¡Tres en raya! Enhorabuena.");
+			alert("Â¡Tres en raya! Enhorabuena.");
 		} else {
 			/// Si no ha terminado la partida
 			if (this.numMovimientos < 9) {
@@ -113,12 +113,12 @@ function Tablero() {
 	this.marcarMovimiento = function (fila, col) {
 		// Si no ha terminado la partida
 		if (this.numMovimientos < 9) {
-			// Si la casilla no está ocupada
+			// Si la casilla no estÃ¡ ocupada
 			if (this.casillas[fila][col] == "") {
 				// La ocupamos
 				this.casillas[fila][col] = this.turno;
 				document.getElementById("casilla" + fila + col).innerHTML = this.turno;
-				// Incrementamos el número de movimientos
+				// Incrementamos el nÃºmero de movimientos
 				this.numMovimientos++;
 				// Comprobar si sigue la partida
 				this.continuarPartida();

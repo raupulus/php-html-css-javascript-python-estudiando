@@ -6,43 +6,43 @@
 	}
 </STYLE>
 <SCRIPT TYPE="text/javascript">
-	// Función que muestra la imagen original
+	// FunciÃ³n que muestra la imagen original
 	function mostrarOriginal() {
 		this.src = "derecha.gif";
 	}
-	// Función que cambia la imagen original
+	// FunciÃ³n que cambia la imagen original
 	function cambiarOriginal() {
 		this.src = "izquierda.gif";
 	}
 	
-	// Función que valida el formulario
+	// FunciÃ³n que valida el formulario
 	function validarFormulario() {
-		// Operaciones de validación
+		// Operaciones de validaciÃ³n
 		with(document.formLogin) {
 			if (usuario.value == "") {
-				alert("El usuario no es válido");
+				alert("El usuario no es vÃ¡lido");
 				usuario.focus();
 			} else if (clave.value == "") {
-				alert("La contraseña no es válida");
+				alert("La contraseÃ±a no es vÃ¡lida");
 				clave.focus();
 			} else {
-				alert("¡Todo correcto! Puedes enviar el formulario.");
+				alert("Â¡Todo correcto! Puedes enviar el formulario.");
 			}
 		}
 	}
 	
-	// Función que comprueba la opción seleccionada
+	// FunciÃ³n que comprueba la opciÃ³n seleccionada
 	function comprobarMezcla() {
-		// Obtenemos la opción seleccionada
+		// Obtenemos la opciÃ³n seleccionada
 		var opcionSeleccionada = this.options[this.selectedIndex];
 		if (opcionSeleccionada.index == 2) {
-			alert("¡Muy bien!");
+			alert("Â¡Muy bien!");
 		} else {
-			alert("Lo siento, no es " + opcionSeleccionada.value + "… Inténtalo de nuevo.");
+			alert("Lo siento, no es " + opcionSeleccionada.value + "Â… IntÃ©ntalo de nuevo.");
 		}
 	}
 	
-	// Función que añade un evento en el textarea
+	// FunciÃ³n que aÃ±ade un evento en el textarea
 	function pintarEvento(evento) {
 		document.formEventos.eventos.value += evento.type + "\n";
 	}
@@ -73,7 +73,7 @@
 				<TD><INPUT TYPE="text" ID="entrada1" NAME="usuario" MAXLENGTH="8" /></TD>
 			</TR>
 			<TR>
-				<TD STYLE="text-align: right;">Contraseña</TD>
+				<TD STYLE="text-align: right;">ContraseÃ±a</TD>
 				<TD><INPUT TYPE="password" ID="entrada2" NAME="clave" /></TD>
 			</TR>
 			<TR>
@@ -103,7 +103,7 @@
 	</LI>
 </UL>
 <SCRIPT TYPE="text/javascript">
-	// Inicializamos selección
+	// Inicializamos selecciÃ³n
 	document.formColores.color.selectedIndex = -1;
 	// Asignamos el manejador
 	document.formColores.color.onchange = comprobarMezcla;
@@ -111,7 +111,7 @@
 
 <UL>
 	<LI>
-		<B>Haz clic sobre el botón para ver los eventos que se lanzan</B>
+		<B>Haz clic sobre el botÃ³n para ver los eventos que se lanzan</B>
 		<FORM NAME="formEventos">
 			<TEXTAREA NAME="eventos" ROWS="9"></TEXTAREA>
 			<INPUT TYPE="button" NAME="btnEvento" VALUE="Ver eventos">

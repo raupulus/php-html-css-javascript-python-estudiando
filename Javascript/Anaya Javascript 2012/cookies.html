@@ -21,7 +21,7 @@
 				// Guardamos el nombre de la cookie
 				nombreCookie = nombre.value;
 			}
-			// Llamamos a la función que recupera la cookie
+			// Llamamos a la funciÃ³n que recupera la cookie
 			valorCookie = recuperarCookie(nombreCookie);
 		}
 		// Mostramos el valor de la cookie
@@ -48,7 +48,7 @@
 				expiracion = new Date();
 				expiracion.setTime(hoy.getTime() + (caducidad.value * 1000));
 			}
-			// Llamamos a la función que crea la cookie
+			// Llamamos a la funciÃ³n que crea la cookie
 			almacenarCookie(nombre.value, valor.value, expiracion);
 			if (caducidad.value != "" && caducidad.value <= 0) {
 				alert("Cookie " + nombre.value + " borrada.");
@@ -61,7 +61,7 @@
 </SCRIPT>
 </HEAD>
 <BODY>
-<H3>Formulario para expiración de cookies</H3>
+<H3>Formulario para expiraciÃ³n de cookies</H3>
 <FORM ID="formulario1" NAME="formCookie">
 	<TABLE>
 	<TR>

@@ -2,35 +2,35 @@
 <HEAD>
 <SCRIPT TYPE="text/javascript" SRC="funciones_cookie.js"></SCRIPT>
 <SCRIPT TYPE="text/javascript">
-	// DeclaraciÛn de variable global
+	// Declaraci√≥n de variable global
 	var numeroIntentos = 0;
 
 	function comprobarAcceso() {
-		// DeclaraciÛn de variables
+		// Declaraci√≥n de variables
 		var texto;
-		// Si est· creada la cookie
+		// Si est√° creada la cookie
 		if (recuperarCookie("intentosAgotados") != "") {
 			// No hacemos nada
 			return;
 		}
-		// Pedimos la contraseÒa al usuario
-		texto = prompt("Por favor, introduce la contraseÒa");
+		// Pedimos la contrase√±a al usuario
+		texto = prompt("Por favor, introduce la contrase√±a");
 		// Si ha pulsado Cancelar o no ha escrito nada
 		if (texto == null || texto == "") {
 			// No hacemos nada
 			return;
 		}
-		// Comparamos si la contraseÒa es v·lida
+		// Comparamos si la contrase√±a es v√°lida
 		if (texto == "ChachiQueSi") {
 			// Redirigimos a la zona privada
 			location.href = "zona_privada.html";
 		} else {
-			// Incrementamos el n˙mero de intentos que lleva
+			// Incrementamos el n√∫mero de intentos que lleva
 			numeroIntentos++;
 			// Mostramos un mensaje
-			alert("Lo siento, la contraseÒa no es correcta.\n" + 
+			alert("Lo siento, la contrase√±a no es correcta.\n" + 
 			"Te quedan " + (3 - numeroIntentos) + " intentos.");
-			// Si hemos llegado al m·ximo de intentos
+			// Si hemos llegado al m√°ximo de intentos
 			if (numeroIntentos == 3) {
 				// Creamos la cookie
 				almacenarCookie("intentosAgotados", 1);
@@ -44,6 +44,6 @@
 - <A HREF="fotos.html">Mis fotos</A><BR />
 - <A HREF="canciones.html">Mis canciones preferidas</A><BR />
 - <A HREF="cosas.html">Cosas que me gustan</A><BR />
-- <A HREF="javascript:void(0)" ONCLICK="comprobarAcceso()">Zona privada</A> (con contraseÒa)
+- <A HREF="javascript:void(0)" ONCLICK="comprobarAcceso()">Zona privada</A> (con contrase√±a)
 </BODY>
 </HTML>

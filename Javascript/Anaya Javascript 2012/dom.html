@@ -14,10 +14,10 @@
 </STYLE>
 <SCRIPT TYPE="text/javascript">
 	function lanzarConfirm() {
-		// Capturamos el botón
-	   var boton = confirm("¿Quieres continuar?");
+		// Capturamos el botÃ³n
+	   var boton = confirm("Â¿Quieres continuar?");
 	   if (boton) {
-		  alert("¡Adelante!");
+		  alert("Â¡Adelante!");
 	   } else {
 		  alert("Hasta pronto");
 	   }
@@ -25,9 +25,9 @@
 
 	function lanzarPrompt() {
 	   // Capturamos el texto
-	   var texto = prompt("¿Qué navegador utilizas?");
+	   var texto = prompt("Â¿QuÃ© navegador utilizas?");
 	   if (texto == null) {
-		  alert("Vale, sólo era una pregunta…");
+		  alert("Vale, sÃ³lo era una preguntaÂ…");
 	   } else {
 		  alert("Utilizas: " + texto);
 	   }
@@ -124,8 +124,8 @@
 </HEAD>
 <BODY>
 <H3>Algunos objetos del DOM</H3>
-<INPUT TYPE="button" VALUE="Método confirm" ONCLICK="lanzarConfirm()">
-<INPUT TYPE="button" VALUE="Método prompt" ONCLICK="lanzarPrompt()"><BR /><BR />
+<INPUT TYPE="button" VALUE="MÃ©todo confirm" ONCLICK="lanzarConfirm()">
+<INPUT TYPE="button" VALUE="MÃ©todo prompt" ONCLICK="lanzarPrompt()"><BR /><BR />
 <INPUT TYPE="button" VALUE="Objeto navigator" ONCLICK="lanzarNavigator()">
 <INPUT TYPE="button" VALUE="Objeto screen" ONCLICK="lanzarScreen()">
 <INPUT TYPE="button" VALUE="Objeto location" ONCLICK="lanzarLocation()">

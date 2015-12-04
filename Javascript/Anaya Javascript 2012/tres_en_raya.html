@@ -44,9 +44,9 @@ var celdas = document.getElementsByTagName("TD");
 for(var i=0; i<celdas.length; i++) {
 	// Asignamos el manejador
 	celdas[i].onclick = function (){
-		// Obtenemos la fila (penúltimo carácter)
+		// Obtenemos la fila (penÃºltimo carÃ¡cter)
 		var fila = this.id.substr(-2, 1);
-		// Obtenemos la columna (último carácter)
+		// Obtenemos la columna (Ãºltimo carÃ¡cter)
 		var columna = this.id.substr(-1);
 		// Registramos la jugada en el tablero
 		tresEnRaya.marcarMovimiento(fila, columna);

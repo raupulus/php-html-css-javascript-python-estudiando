@@ -2,10 +2,10 @@
 <HEAD>
 <SCRIPT TYPE="text/javascript">
 	function calcularLetra(numeroDNI) {
-		// Declaraci髇 de variables
+		// Declaraci贸n de variables
 		var posicion, letra;
 		var letrasDNI = "TRWAGMYFPDXBNJZSQVHLCKET";
-		// Calculamos la posici髇
+		// Calculamos la posici贸n
 		posicion = numeroDNI % 23;
 		// Extraemos la letra calculada
 		letra = letrasDNI.substr(posicion, 1);
@@ -14,25 +14,25 @@
 	}
 
 	function comprobarFormato(numeroDNI) {
-		// Declaraci髇 de variables
+		// Declaraci贸n de variables
 		var patronDNI = new RegExp("\\d{8}[a-zA-Z]");
 		// Comprobamos el formato
 		if (patronDNI.test(numeroDNI)) {
-			// Devolvemos los 8 n鷐eros del DNI
+			// Devolvemos los 8 n煤meros del DNI
 			return numeroDNI.substr(0, 8);
 		} else {
 			// Mostramos un mensaje al usuario
-			alert("El DNI " + numeroDNI + " no tiene un formato v醠ido");
+			alert("El DNI " + numeroDNI + " no tiene un formato v谩lido");
 			return "";
 		}
 	}
 
 	function validarDNI() {
-		// Declaraci髇 de variables
+		// Declaraci贸n de variables
 		var DNIUsuario, numeroDNI, letraUsuario, letraCalculada;
 		// Recogemos el valor del formulario
 		DNIUsuario = document.formDNI.dni.value;
-		// Comprobamos el formato y guardamos el n鷐ero sin la letra
+		// Comprobamos el formato y guardamos el n煤mero sin la letra
 		numeroDNI = comprobarFormato(DNIUsuario);
 		// Si el formato es correcto
 		if (numeroDNI != "") {

@@ -1,16 +1,16 @@
 <HTML>
 <HEAD>
 <SCRIPT TYPE="text/javascript">
-	// Declaración de constante
+	// DeclaraciÃ³n de constante
 	var LONGITUD_MAX = 160;
 	function calcularRestantes(texto) {
 		// Calculamos los caracteres restantes
 		var resto = LONGITUD_MAX - texto.length;
-		// Detectamos si hemos llegado al límite
+		// Detectamos si hemos llegado al lÃ­mite
 		if (resto < 0) {
 			// Sustituimos el texto actual
 			document.formSMS.sms.value = texto.substr(0, LONGITUD_MAX);
-			// Forzamos la llegada al límite
+			// Forzamos la llegada al lÃ­mite
 			resto = 0;
 		}
 		// Escribimos el resultado en el formulario
