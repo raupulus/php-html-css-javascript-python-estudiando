@@ -1,6 +1,6 @@
 function almacenarCookie(nombre, valor, caducidad, dominio, ruta, segura) {
 	var cookie;
-	// A馻dimos el nombre de la cookie y su valor
+	// A帽adimos el nombre de la cookie y su valor
 	cookie = nombre + "=" + escape(valor);
 	// Comprobamos si hemos recibido caducidad
 	if (arguments[2] != undefined) {
@@ -14,30 +14,30 @@ function almacenarCookie(nombre, valor, caducidad, dominio, ruta, segura) {
 	if (arguments[4] != undefined) {
 		cookie += "; path=" + ruta;
 	}
-	// Comprobamos si hemos recibido segura y si hay que a馻dirla
+	// Comprobamos si hemos recibido segura y si hay que a帽adirla
 	if (arguments[5] != undefined && segura) {
 		cookie += "; secure";
 	}
-	// A馻dimos la cookie
+	// A帽adimos la cookie
 	document.cookie = cookie;
 }
 
 function recuperarCookie(nombreCookie) {
-	// Definici髇 de variables
+	// Definici贸n de variables
 	var posicionCookie, posicionPuntoComa;
 	var posicionInicio, posicionFin;
 	var valorCookie = "";
 	// Comprobamos si hay cookies
 	if (document.cookie.length > 0) {
-		// Buscamos la posici髇 de la cookie
+		// Buscamos la posici贸n de la cookie
 		posicionCookie = document.cookie.indexOf(nombreCookie + "=");
-		// Si hemos encontrado la posici髇
+		// Si hemos encontrado la posici贸n
 		if (posicionCookie != -1) {
-			// Calculamos la posici髇 de inicio del valor
+			// Calculamos la posici贸n de inicio del valor
 			posicionInicio = posicionCookie + nombreCookie.length + 1;
-			// Buscamos la posici髇 del punto y coma m醩 pr髕imo
+			// Buscamos la posici贸n del punto y coma m谩s pr贸ximo
 			posicionPuntoComa = document.cookie.indexOf(";", posicionCookie);
-			// Si estamos en la 鷏tima cookie (no hay punto y coma)
+			// Si estamos en la 煤ltima cookie (no hay punto y coma)
 			if (posicionPuntoComa == -1) {
 				// Leemos hasta el final de la cadena
 				posicionFin = document.cookie.length;
