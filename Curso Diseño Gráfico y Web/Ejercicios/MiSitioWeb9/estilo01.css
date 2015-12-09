@@ -1,0 +1,109 @@
+/*Hoja de estilo para el index*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: black;
+	padding: 5px 0;
+}
+
+#contenedor {
+	width: 1024px;
+	margin: auto;
+	background-color: white;
+}
+
+#cabecera {
+	width: 1005px;
+	height: 140px;
+	margin: 10px 5px;
+	background-color: red;
+	background-image: url(fondo.jpg);
+	border: 4px solid red;
+}
+#cabecera IMG {
+	float: right;
+}
+
+#menu {
+	float: left;
+	width: 280px;
+	height: 1020px;
+	margin: 5px;
+	padding: 10px 20px;
+	background-color: black;
+}
+#menu UL LI {
+	margin: 8px 0;
+	padding: 5px;
+	list-style: none;
+	background-color: orangered;
+}
+#menu UL LI:hover {
+	background-color: palegreen;
+}
+#menu A {
+	text-decoration: none;
+	font-size: 1.4em;
+	color: white;
+}
+#menu A:hover {
+	color: black;
+}
+#index #inicio LI, #sitiopollo #pollo LI, #sitiomacarrones #macarrones LI, #sitiolentejas #lentejas LI, #sitiogazpacho #gazpachoLI, #sitiocontacto #contacto LI {
+	background-color: darkslategrey;
+	color: greenyellow;
+}
+
+#cuerpo {
+	float: right;
+	width: 630px;
+	height: 1020px;
+	margin: 5px;
+	padding: 10px;
+	background-color: deepskyblue;
+}
+
+TABLE A {
+	text-decoration: none;
+	color: red;
+	font-size: 1.3em
+}
+#tablaindex1, #tablaindex2 {
+	margin: auto;
+	padding: 0;
+}
+
+#tablaindex1 TD, #tablaindex2 TD {
+	padding: 0;
+	border: 4px solid black;
+	background-color: white;
+}
+
+#tablaindex1 TH, #tablaindex2 TH {
+	padding: 0;
+	border: 4px solid black;
+	background-color: white;
+}
+#tablaindex1 IMG, #tablaindex2 IMG {
+	margin: auto;
+	align-content: center;
+	align-items: center;
+	vertical-align: middle;
+}
+
+#pie {
+	padding-top: 15px;
+	clear: both;
+	width: 100%;
+	height: 80px;
+	background-color: orange;
+	align-content: center;
+	text-align: center;
+	font-size: 2em;
+	font-family: monospace;
+	background-image: url(pie.jpg);
+	border-top: 5px solid black;
+}
