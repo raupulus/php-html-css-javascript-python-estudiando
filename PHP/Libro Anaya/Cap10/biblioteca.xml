@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<biblioteca>
+  <tema id="informatica">
+    <libro>
+      <titulo>Manual Imprescindible de PHP 6</titulo>
+      <autor>Luis Miguel Cabezas Granado</autor>
+      <editorial>Anaya Multimedia</editorial>
+      <imagen>http://ecx.images-amazon.com/images/I/41YZue-bJ4L._AA160_.jpg</imagen>
+    </libro>
+    <libro>
+      <titulo>Professional PHP 5</titulo>
+      <autor>Lecky Thomson</autor>
+      <editorial>Wrox</editorial>
+      <imagen>http://ecx.images-amazon.com/images/I/414-yi8KZuL._AA160_.jpg</imagen>
+    </libro>
+    <libro>
+      <titulo>Agile Web Development with Rails</titulo>
+      <autor>Sam Ruby</autor>
+      <editorial>Pragmatic Programmers</editorial>
+      <imagen>http://ecx.images-amazon.com/images/I/41nToGax%2BRL._AA160_.jpg</imagen>
+    </libro>
+    <libro>
+      <titulo>Rails 4 in Action</titulo>
+      <autor>Ryan Bigg</autor>
+      <editorial>Manning</editorial>
+      <imagen>http://ecx.images-amazon.com/images/I/51tRMoQ%2BmvL._AA160_.jpg</imagen>
+    </libro>
+  </tema>
+</biblioteca>

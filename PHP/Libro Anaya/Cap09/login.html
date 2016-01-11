@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Acceso a la aplicación</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <script src="jquery-1.10.2.min.js"></script>
+        <script src="jquery.validate.min.js"></script>
+        <script src="messages_es.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Acceso a la aplicación</h1>
+            <form role="form" id="miFormulario" method="post" action="comprobarUsuario.php">
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" name="username" class="form-control" 
+                           id="username" placeholder="Escriba el nombre de usuario ..."
+                           required="true"/>
+                </div>
+                <div class="form-group">
+                    <label for="password">Clave</label>
+                    <input type="password" name="password" class="form-control"
+                        id="password" placeholder="Escriba la clave ..."
+                        required="true"/>
+                </div>
+                <button type="submit" class="btn btn-default">Enviar</button>
+            </form>
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+$("#miFormulario").validate();
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>Ejemplo Eventos</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <script src="jquery-1.10.2.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </head>
+   <body>
+      <input type="text" id="miCampo" />
+      <a id="miEnlace" href="miPagina.php">Enlace a miPagina.php</a>
+      <div id="log"></div>
+    </body>
+</html>
+<script>
+$(document).ready(function(){ 
+   $("#miEnlace").on("click mouseenter", {color : 'red'},
+      function(event){
+         event.preventDefault();
+         $(this).css("color", event.data.color); 
+         $( "<div>" )
+            .append( event.type + " por defecto prevenido" )
+            .appendTo( "#log" );   
+   });
+   
+   $("#miCampo").on({
+     click: function() {
+         $( this ).css( "background-color","yellow");
+     }, 
+     blur: function() {
+         $( this ).css( "background-color","white" );
+     }
+   });
+});
+</script>
+

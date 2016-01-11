@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div id="miBloque1" class="alert alert-success">Haga clic para cambiar mi estilo</div>
+            </div>
+            <div class="row">
+                <div id="miBloque2" class="well">Pase el cursor por encima</div>
+            </div>
+            <div class="row">
+                <a href="#" class="miEnlace">Haz clic para cambiar mi color</a>
+            </div>
+            <div class="row">
+                <label id="miEtiqueta">Cambie el color en la lista</label>
+                <select class="form-control" id="miLista" >
+                    <option value="white">Selecciona tu color</option>
+                    <option value="yellow">Amarillo</option>
+                    <option value="red">Rojo</option>
+                    <option value="blue">Azul</option>
+                </select>
+            </div>
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#miBloque1").click(
+        function(event){
+            $(this).removeClass("alert-success");
+            $(this).addClass("alert-info");
+        }
+    );
+    $("#miBloque2").hover(
+        function(event){
+            $(this).css("color","red");
+        }
+    );
+    $("#miBloque2").mouseleave(
+        function(event){
+            $(this).css("color","black");
+        }
+    );
+    $("#miLista").change(
+        function(event){
+            $(this).css("background-color",$(this).val());
+        }
+    );    
+        
+});
+</script>
+

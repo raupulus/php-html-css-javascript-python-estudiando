@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>Ejemplo Efectos jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <script src="jquery-1.10.2.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </head>
+   <body>
+      <div class="container">
+          <div class="row">
+              <div id="miElemento" class="well">Elemento</div>
+              <div><a href="#" id="ocultaElemento">Ocultar elemento</a></div>
+              <div><a href="#" id="muestraElemento">Mostrar elemento</a></div>
+              <div><a href="#" id="alternaElemento">Mostrar/Ocultar elemento</a></div>
+              <div><a href="#" id="fundidoSalidaElemento">Fundido de salida de elemento</a></div>
+              <div><a href="#" id="fundidoEntradaElemento">Fundido de entrada de elemento</a></div>
+          </div>
+      </div>
+    </body>
+</html>
+<script>
+$(document).ready(function(){ 
+   $("#ocultaElemento").click(
+      function(event){
+         event.preventDefault();
+         $("#miElemento").hide("slow");
+   });
+   $("#muestraElemento").click(
+      function(event){
+         event.preventDefault();
+         $("#miElemento").show("fast");
+   });
+   $("#alternaElemento").click(
+      function(event){
+         event.preventDefault();
+         $("#miElemento").toggle(400,function(){
+             // Fin de animación
+         });
+   });
+   $("#fundidoSalidaElemento").click(
+      function(event){
+         event.preventDefault();
+         $("#miElemento").fadeOut("slow",function(){
+             // Fin de animación
+         });
+   });
+   $("#fundidoEntradaElemento").click(
+      function(event){
+         event.preventDefault();
+         $("#miElemento").fadeIn("slow",function(){
+             // Fin de animación
+         });
+   });
+});
+</script>
+

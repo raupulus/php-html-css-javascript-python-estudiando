@@ -1,0 +1,36 @@
+<definitions name="Operaciones" targetNamespace="LOCATION">
+    <types>
+        <xsd:schema targetNamespace="LOCATION"/>
+    </types>
+    <portType name="OperacionesPort">
+        <operation name="suma">
+            <documentation>Exporta la fecha del Sistema</documentation>
+            <input message="tns:sumaIn"/>
+            <output message="tns:sumaOut"/>
+        </operation>
+    </portType>
+    <binding name="OperacionesBinding" type="tns:OperacionesPort">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="suma">
+            <soap:operation soapAction="LOCATION#suma"/>
+            <input>
+                <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="LOCATION"/>
+            </input>
+            <output>
+                <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="LOCATION"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="OperacionesService">
+        <port name="OperacionesPort" binding="tns:OperacionesBinding">
+            <soap:address location="LOCATION"/>
+        </port>
+    </service>
+    <message name="sumaIn">
+        <part name="a" type="xsd:int"/>
+        <part name="b" type="xsd:int"/>
+    </message>
+    <message name="sumaOut">
+        <part name="return" type="xsd:int"/>
+    </message>
+</definitions>
