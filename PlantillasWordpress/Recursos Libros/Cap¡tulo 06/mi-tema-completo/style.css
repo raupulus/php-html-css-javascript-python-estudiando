@@ -1,0 +1,92 @@
+/*
+Theme name: Mi tema completo
+Theme URI: http://www.miweb.net/tema-completo.html
+Author: Christophe AUBRY
+Author URI: http://www.miweb.es
+Description: Tema completo para WordPress
+Version: v0.1
+Tags: simple,completo,blanco,gris
+*/
+
+/* Diseño de líneas */
+.units-row {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+/* Formato cabecera */
+header {
+	padding: 10px;
+	border-bottom: 1px solid #333;
+}
+.inline {
+	display: inline;
+}
+/* Barras de menús */
+#principal, #secundario {
+	border-bottom: 1px solid #333;
+}
+#cabecera nav ul {
+	margin: 0 0 0 10px;
+	padding: 10px 0 10px 10px;
+	list-style: none;
+}
+#cabecera nav li {
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+/* Formato barra lateral */
+#izquierda ul, #derecha ul {
+	margin: 0 0 0 10px;
+	padding: 10px 0 10px 10px;
+	list-style: none;
+}
+/* Formato pie de página */
+footer {
+	border-top: 1px solid #333;
+	padding: 10px;
+}
+footer p {
+	margin: 0;
+}
+
+/* Formato de entradas con formato Estándar */
+.entrada {
+	padding-left: 0;
+	border: none;
+}
+.extracto {
+	font-style: italic;
+	color: gray;
+}
+.post-categories::before {
+	content: "Categoría: ";
+}
+.post-categories {
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+.post-categories li {
+	display: inline-block;
+}
+footer.entrada {
+	font-size: small;
+	font-style: italic;
+	color: gray;
+}
+/* Formato de entradas con formato Minientrada */
+.single-format-aside .contenido {
+	padding-left: 20px ;
+	border-left: 1px solid #bbb;
+}
+
+/* Formato del autor */
+.autor {
+	margin-left: 20px;
+	border-left: 1px solid #333;
+	background-color: #eee;
+	padding: 20px;
+}
+
+

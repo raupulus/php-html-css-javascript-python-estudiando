@@ -21,7 +21,7 @@
 	<P>prueba</P>
 	<DIV id="CajaGeneral">
 		<?php
-
+		echo phpversion();
 		?>
 	</DIV>
 <?php
